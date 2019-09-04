@@ -1,2 +1,2 @@
 # jaic_dev
- template files
+ site files
