@@ -5547,7 +5547,7 @@ pre {
 }
 
 .parallax:before {
-	top: -1.429rem;
+	top: -3.429rem;
 	bottom: -1.429rem;
 }
 
@@ -5708,7 +5708,7 @@ pre {
 }
 
 .quotation-block-v7 {
-	background-image: url('../img/banner_img1blue.png');
+	background-image: url('../img/banner_img2.png');
 }
 
 .information-block {
