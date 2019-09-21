@@ -1,5 +1,45 @@
 @font-face {
   font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?lvrqit');
+  src:  url('fonts/icomoon.eot?lvrqit#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?lvrqit') format('truetype'),
+    url('fonts/icomoon.woff?lvrqit') format('woff'),
+    url('fonts/icomoon.svg?lvrqit#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-manfire:before {
+  content: "\e888";
+}
+@font-face {
+  font-family: 'icomoon';
   src: url("../../../fonts/icomoon/icomoon.eot");
   src: url("../../../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../../../fonts/icomoon/icomoon.ttf") format("truetype"), url("../../../fonts/icomoon/icomoon.woff") format("woff"), url("../../../fonts/icomoon/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
@@ -17,6 +57,10 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-icon_strategy:before {
+  content: "\e161";
+}
 
 @font-face {
   font-family: 'roxine-font-icon';
@@ -48,6 +92,7 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
 
 .custom-icon-award:before {
   content: "\e900"; }
@@ -172,6 +217,9 @@
 .custom-icon-arrow-right:before {
   content: "\e928"; }
 
+.icon-manfire:before {
+  content: '\eaeb';
+}
 .icon-users-1:before {
   content: '\e56c'; }
 
