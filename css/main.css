@@ -4194,6 +4194,7 @@ em.state-invalid {
 
 /******* button styles *******/
 
+
 .btn {
 	position: relative;
 	padding: .9375rem;
@@ -5646,13 +5647,13 @@ pre {
 }
 
 .about-banner {
-	background-image: url('../img/visual-small-01.jpg');
+	background-image: url('../img/bkgpoly_header3.png');
 }
 .news-banner {
-	background-image: url('../img/news_media_header_.png');
+	background-image: url('../img/bkgpoly_header3.png');
 }
 .blog-banner {
-	background-image: url('../img/bkg_img_polygon2a.png');
+	background-image: url('../img/bkgpoly_header3.png');
 }
 .careers-banner {
 	background-image: url('../img/bkg_img_polygon1.png');
