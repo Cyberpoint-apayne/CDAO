@@ -28,6 +28,7 @@
     <link media="all" rel="stylesheet" href="css/main.css">
     <!-- Custom CSS -->
     <link media="all" rel="stylesheet" href="css/custom.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
@@ -35,7 +36,15 @@
     <div id="wrapper">
         <div class="page-wrapper">
             <!-- header of the page -->
-				<!--#include file="header.html" -->
+		<div id="nav-placeholder">
+
+		</div>
+
+		<script>
+		$(function(){
+		  $("#nav-placeholder").load("header.html");
+		});
+		</script>
             <!--/header of the page -->
             <main>
                <!-- visual/banner of the page -->
