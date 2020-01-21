@@ -895,6 +895,9 @@ h3 {
 h4 {
 	color: #fa8b1d
 }
+h5 {
+	color: #F8E808
+}
 
 .cursive-style {
 	font-family: 'Just Another Hand', cursive;
@@ -5670,11 +5673,18 @@ pre {
 .partnerships-banner {
 	background-image: url('../img/robot_handshake_1.jpg');
 }
+.symposium-banner {
+	background-image: url('../img/washdc.jpg');
+}
+.symposium20EC-banner {
+	background-image: url('../img/ai2020_2bkg.jpg');
+}
 .industry-banner {
 	background-image: url('../img/robot_handshake_1.jpg');
 }
 .academia-banner {
-	background-image: url('../img/robot_handshake_1.jpg');}
+	background-image: url('../img/robot_handshake_1.jpg');
+}
 
 .portfolio-banner {
 	background-image: url('../img/visual-small-02.jpg');
