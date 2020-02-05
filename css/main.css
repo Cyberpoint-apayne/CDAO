@@ -5679,6 +5679,9 @@ pre {
 .symposium20EC-banner {
 	background-image: url('../img/ai2020_2bkg.jpg');
 }
+.hotel-banner {
+	background-image: url('../img/cc_hyatt.jpg');
+}
 .industry-banner {
 	background-image: url('../img/robot_handshake_1.jpg');
 }
@@ -5711,7 +5714,7 @@ pre {
 }
 
 .quotation-block-v5 {
-	background-image: url('../img/big-04.jpg');
+	background-image: url('../img/cc_hyatt.jpg');
 }
 
 .quotation-block-v6 {
