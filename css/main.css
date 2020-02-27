@@ -5713,6 +5713,9 @@ pre {
 	background-image: url('../img/big-06.jpg');
 }
 
+.quotation-block-v4 {
+	background-image: url('../img/../img/ai2020_bkg3.png');
+}
 .quotation-block-v5 {
 	background-image: url('../img/cc_hyatt.jpg');
 }
@@ -6390,7 +6393,7 @@ pre {
 }
 
 .team-box figcaption,.team-box .figcaption {
-	background: #5645ff;
+	background: #0480be;
 	color: #fff;
 }
 
