@@ -5657,6 +5657,7 @@ pre {
 }
 .blog-banner {
 	background-image: url('../img/../img/aid_header.png');
+	background-size: contain;
 }
 .careers-banner {
 	background-image: url('../img/bkg_img_polygon1.png');
@@ -5714,7 +5715,7 @@ pre {
 }
 
 .quotation-block-v4 {
-	background-image: url('../img/../img/ai2020_bkg3.png');
+	background-image: url('../img/../img/ai2020_bkg.png');
 }
 .quotation-block-v5 {
 	background-image: url('../img/cc_hyatt.jpg');
