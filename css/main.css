@@ -4840,10 +4840,18 @@ em.state-invalid {
 .content-sub-title {
 	display: block;
 	margin-bottom: 2rem;
+	line-height: 1.2;
 	color: #575757;
 	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.content-sub-title ns {
+	display: block;
+	margin-bottom: 2rem;
+	line-height: 1.2;
+	color: #575757;
+	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 .col-wrap {
 	margin-bottom: 2.5rem;
 }
@@ -5746,8 +5754,15 @@ pre {
 	background-image: url('../img/banner_img3.png');
 }
 
+.quotation-block-v9 {
+	background-image: url('../img/banner_img4.png');
+}
 .quotation-block-v8 {
 	background-image: url('../img/ai2021_bkg.png');
+}
+
+.quotation-block-v10 {
+	background-image: url('../img/bkg_img_polygon4.png');
 }
 .information-block {
 	background-image: url('../img/visual-03.jpg');
