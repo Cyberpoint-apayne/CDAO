@@ -3747,7 +3747,7 @@ em.state-invalid {
 }
 
 .main-header.header-white {
-	background: #fff;
+	background: transparent;
 }
 
 .main-header.header-white .navbar .navbar-nav li {
