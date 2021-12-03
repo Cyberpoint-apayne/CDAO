@@ -11508,7 +11508,7 @@ a.full-width-icon:hover .social-text {
 
 @media only screen and (min-width: 991px) {
 	.main-header.header-white.transparent {
-		background-image: linear-gradient(rgba(5,24,98,1), rgba(0,0,0,0));
+		background-image: linear-gradient(rgba(18,68,141,1), rgba(0,0,0,0));
 	}
 
 	.main-header.header-white.transparent .navbar .navbar-brand img:first-child {
