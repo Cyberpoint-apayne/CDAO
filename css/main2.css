@@ -3746,8 +3746,7 @@ em.state-invalid {
 	visibility: hidden;
 }
 
-.main-header.header-white {
-	background: transparent;
+.main-header.header-white { 
 }
 
 .main-header.header-white .navbar .navbar-nav li {
