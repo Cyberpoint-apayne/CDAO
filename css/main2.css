@@ -3993,7 +3993,7 @@ em.state-invalid {
 
 .visual-inner {
 	white-space: nowrap;
-	text-align: center;
+	text-align: left;
 	height: 100vh;
 	padding: 3.125rem 0;
 	min-height: 26.25rem;
@@ -5767,6 +5767,10 @@ pre {
 .quotation-block-v10 {
 	background-image: url('../img/bkg_img_polygon4.png');
 }
+.quotation-block-v11 {
+	background-image: url('../img/bkgd_bluegrey.png');
+}
+
 .information-block {
 	background-image: url('../img/visual-03.jpg');
 }
@@ -11615,7 +11619,7 @@ a.full-width-icon:hover .social-text {
 	}
 
 	.visual-sub-title {
-		margin-bottom: 1rem;
+		margin-bottom: .1rem;
 	}
 
 	.visual-text-v1 p,.visual-text-v2 p,.visual-text-v3 p {
