@@ -3991,7 +3991,7 @@ em.state-invalid {
 
 /******* visual styles *******/
 
-.visual-inner {
+v {
 	white-space: nowrap;
 	text-align: left;
 	height: 100vh;
@@ -5663,7 +5663,7 @@ pre {
 }
 
 .visual-banner-v22 {
-	background-image: url('../img/visual-15.jpg');
+	background-image: url('../img/bkgd_bluegrey.png');
 }
 
 .visual-banner-v23 {
@@ -5768,7 +5768,7 @@ pre {
 	background-image: url('../img/bkg_img_polygon4.png');
 }
 .quotation-block-v11 {
-	background-image: url('../img/bkgd_bluegrey.png');
+	background-image: url('../img/bkgd_bluegrey1920x1120.png');
 }
 
 .information-block {
@@ -10260,7 +10260,7 @@ a.full-width-icon:hover .social-text {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background: rgba(0, 0, 0, .8);
+	background: rgba(0, 0, 0, .0);
 	content: '';
 	position: absolute;
 }
