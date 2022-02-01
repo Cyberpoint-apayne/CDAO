@@ -889,7 +889,7 @@ h3 {
 	font-size: 1.125rem;
 	line-height: 1.2;
 	/*font-weight: 700;*/
-	color: #fa8b1d
+	color: #E07000
 }
 
 h4 {
@@ -4600,7 +4600,7 @@ v {
 }
 #rcorners1 {
   border-radius: 25px;
-  background: #FA8B1D;
+  background: #E07000;
 }
 #rcorners2 {
   border-radius: 25px;
@@ -4623,7 +4623,7 @@ v {
       box-sizing: content-box;
       border-width: 50px 18px 0;
       border-style: solid;
-      border-color: #fa8b1d transparent;
+      border-color: #E07000 transparent;
     }
     .pentagon:before {
       content: "";
@@ -5423,11 +5423,11 @@ pre {
 }
 
 .ico-box .link-holder .link-more:hover {
-	color: #FA8B1D;
+	color: #E07000;
 }
 
 .ico-box.dark-hover:before {
-	background: #FA8B1D;
+	background: #E07000;
 }
 
 .ico-box.dark-hover:hover .des,.ico-box.dark-hover:hover .link-more {
@@ -5435,7 +5435,7 @@ pre {
 }
 
 .ico-box.dark-hover .link-more:hover {
-	color: #FA8B1D;
+	color: #E07000;
 }
 
 .ico-box.has-shadow {
@@ -7870,7 +7870,7 @@ a.full-width-icon:hover .social-text {
 	border: none;
 }
 .accordion-container.accordion-secondary .card .card-header:hover {
-	background: #fa8b1d;
+	background: #E07000;
 	color: #fff;
 	border: none;
 }
@@ -10358,7 +10358,7 @@ a.full-width-icon:hover .social-text {
 }
 
 .bg-orange {
-	background: #fa8b1d;
+	background: #E07000;
 }
 
 .bg-white {
