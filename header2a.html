@@ -3,11 +3,14 @@
                 <div id="nav-section">
                     <div class="bottom-header container-fluid mega-menus" id="mega-menus">
                         <nav class="navbar navbar-toggleable-md no-border-radius no-margin mega-menu-multiple" id="navbar-inner-container">
-                            <form action="mega-menu-5.html" id="top-search" class="no-margin top-search">
-                                <div class="form-group no-margin">
-                                    <input class="form-control no-border" id="search_term" name="search_term" placeholder="Type & Press Enter" type="text">
-                                </div>
-                            </form>
+                            <form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get">
+    <div style="margin:0;padding:0;display:inline">
+    <input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" />
+    <label for="query">Enter Search Term(s):</label>
+    <input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" />
+    <input name="commit" type="submit" value="Search" />
+</form>
                             <button type="button" class="navbar-toggler navbar-toggler-left" data-toggle="collapse" data-target="#mega-menu">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
