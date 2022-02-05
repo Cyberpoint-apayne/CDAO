@@ -3,19 +3,19 @@
                 <div id="nav-section">
                     <div class="bottom-header container-fluid mega-menus" id="mega-menus">
                         <nav class="navbar navbar-toggleable-md no-border-radius no-margin mega-menu-multiple" id="navbar-inner-container">
-                            <form action="mega-menu-5.html" id="top-search" class="no-margin top-search">
-                                <div class="form-group no-margin">
-                                    <input class="form-control no-border" id="search_term" name="search_term" placeholder="Type & Press Enter" type="text">
-                                </div>
-                            </form>
-                            <button type="button" class="navbar-toggler navbar-toggler-left" data-toggle="collapse" data-target="#mega-menu">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <a class="navbar-brand mr-auto m-sm-auto" href="index.html"> <img src="img/jaic_logo.png" alt="JAIC"> <img src="img/jaic_logo_.png" alt="jaic"> </a>
+                            <form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get">
+								<div style="margin:0;padding:0;display:inline">
+								<input name="utf8" type="hidden" value="&#x2713;" /></div>
+								<input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" />
+								<label for="query">Enter Search Term(s):</label>
+								<input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" />
+								<input name="commit" type="submit" value="Search" />
+							</form>
+                           <a class="navbar-brand mr-auto m-sm-auto" href="index.html"> <img src="img/jaic_logo.png" alt="JAIC"> <img src="img/jaic_logo_.png" alt="jaic"> </a>
                             <div class="collapse navbar-collapse flex-row-reverse" id="mega-menu">
-                                <ul class="nav navbar-nav navbar-hover">
-                                	<li>
-                                        <a href="index.html" data-title="Home"> Home </a>
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown" data-animation="fadeIn">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home"> Home </a>
 										
                                     </li>
                                     <li class="dropdown" data-animation="fadeIn">
