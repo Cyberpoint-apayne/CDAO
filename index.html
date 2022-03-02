@@ -39,6 +39,23 @@
     <!-- Custom CSS -->
     <link media="all" rel="stylesheet" href="css/custom.css">
 	<script src="https://www.ai.mil/js/jquery-3.6.0.min.js"></script>
+	
+	<style>
+.parallax {
+  /* The image used */
+  background-image: url("img/bkg_img_polygon1.png");
+	
+  /* Set a specific height */
+  min-height: 100px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+</style>
 </head>
 
 <body class="white-overlay">
@@ -61,7 +78,7 @@
 
 		<script>
 		$(function(){
-		  $("#nav-placeholder").load("header.html");
+		  $("#nav-placeholder").load("header-test.html");
 		});
 		</script>
 	<!--/header of the page -->
@@ -99,26 +116,57 @@
                         </div>
                     </div>
                 </div>
-                <!-- visual/banner of the page -->
-                
-              <!--<div class="content-wrapper">
-			<section>
-				<div class="row" style="background: #049dd9; padding: 20px; color: #FF8C0B; padding-bottom: 20px">
-					<div class="row" style="padding-left: 60px; padding-right: 60px">
-						<div class="col-lg-12 col-md-12 col-sm-12" style="color: #FFFFFF; font-size: 20px">
-					  		<img src="img/deasy_circ.png" style="float: left; padding-right: 40px; padding-bottom: 20px; padding-top: 20px" alt="deasy photo"/>
-					  		<h3 style="color: #051862; padding-left: 60px; padding-top: 40px;"><strong>Welcome from the DoD CIO </strong></h3>
-							<p>As the Department of Defense’s Chief Information Officer (CIO), I want to welcome you to AI.mil, the DoD Joint AI Center’s (JAIC) new website! </p>
-					  		<p>This is an exciting time to be in the Department of Defense. Rapid technology advancements are dramatically shrinking the gap between the digital and physical worlds. We’re moving the Department’s mindset and culture from a hardware-centric and industrial-age force to a software-driven and information age one. Digital modernization is becoming synonymous with warfighting modernization. </p>
-							<div class="col-sm-12 bottom-space-small-only" style align="right">
-							<a href="welcome.html" class="btn btn-small-font btn-trans-white">READ MORE<span class="c-ripple js-ripple"><span class="c-ripple__circle"></span></span></a>
-                			</div>
+                <section id="ai_adoption" class="content-block" style="padding-bottom: 20px;">
+                        <div class="container">
+                            <div class="inner-wrapper">
+                               <div class="block-heading row bottom-space-small-only">
+								   <div class="block-top-heading col-lg-12"><h3><strong>AI Adoption Journey</strong></h3><hr></div>
+								   <div class="block-heading col-lg-6">
+									   <p>Welcome to our Artificial Intelligence Adoption Journey series!</p>
+
+										<p>Gone are the days of human labor being adequate to comprehend and harness the vast potential of the data available around us. Instead, if you want to remain competitive, you must appreciate how crucial data collection is and how AI and Machine Learning can get you impactful solutions from it.</p>
+
+										<p>AI adoption can seem like a monumental challenge (trust us, we know!), but that is why we invite you to join us beginning March 2nd, for a weekly series on how it can be done!</p>
+
+										<p>Through this series we share lessons learned, best practices, and resources we’ve developed alongside our innovation partners from the academic and tech industry. Our goal is to help you every step on the way, from forming an AI vision (what does it mean to “do AI” and what can it do for me?), to tackling technical milestones (how do I forecast program cost and acquire solutions in such a rapidly emerging field?), and ultimately, capability development and sustainment (what does my AI platform do and how do I prepare for its lifecycle?).</p>
+
+										<p>Now is the time to invest in your adoption journey, so welcome to the series and the AI conversation!</p>
+									    <a class="btn btn-primary has-radius-small" style="color: #FFFFFF">MORE TO COME NEXT WEEK!</a>
+									</div>
+								    <div class="block-heading col-lg-6">
+									  <img src="img/ai_adoption_journey_map2c.png" alt="AI Adoption Journey Map" style="padding-bottom: 40px">
+										
+									  <div class="embed-responsive embed-responsive-16by9">
+											<iframe width="420" height="315"
+											src="https://www.youtube.com/embed/A147mAy4d2o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+											</iframe>
+										</div>
+										<!--<div class="media-block mb-2">
+                                   		 <!-- 16:9 aspect ratio -->
+											<!--<div class="embed-responsive embed-responsive-16by9">
+											<video height="50%" width="50%" src="https://www.youtube.com/watch?v=A147mAy4d2o" controls></video>
+										  </div>
+										</div>-->
+										
+										<div class="post-link-holder" style="padding-top: 10px">
+											<a href="https://www.youtube.com/watch?v=A147mAy4d2o" target="_blank" rel="noopener noreferrer" alt="AI Adoption Journey Introduction">DoD Users - Click here to Watch Video <span class="fa fa-arrow-right"><span class="sr-only">&nbsp;</span></span></a><br>
+											<!--<br> DoD Users <a href="assets/videos/jaic_ai_explainer_oc.mp4" target="_blank">click here.<span class="fa fa-arrow-right"><span class="sr-only">&nbsp;</span></span></a>-->
+										</div>
+											<!--<div class="post-social text-left" style="padding-top: 10px">
+												<ul class="social-network social-small">
+													<li><a href="https://www.youtube.com/watch?v=A147mAy4d2o" target="_blank" rel="noopener noreferrer"><span class="icon-youtube-play"><span class="sr-only">&nbsp;</span></span></a></li><br>
+												</ul>
+											</div>-->
+								   </div>
+							 </div>
 						</div>
 					</div>
-				</div>
-			</section>-->
-					<section class="content-block">
-						<div class="container">
+				</section>
+				
+				<!-- visual/banner of the page -->
+             	<section class="content-block quotation-block black-overlay-0">
+						<div class="parallax black-overlay-0"></div>
+					<div class="container" style="padding-top: 80px">
 							<div class="row" style="padding-left: 14px; padding-right: 14px;">
                         		<div class="col-lg-4 col-md-12 col-sm-12" style="padding-right: 40px; padding-left: 40px; padding-bottom: 20px; padding-top: 20px;">
 									<h3>The JAIC's Vision to Transform the DoD Through AI</h3>
@@ -143,7 +191,7 @@
 							</div>
 						</div>
 					</section>
-                	<section class="content-block quotation-block black-overlay-0 quotation-block-v7 parallax" data-stellar-background-ratio="0.55">
+                	<section class="content-block quotation-block black-overlay-0 quotation-block-v7" data-stellar-background-ratio="0.55">
                         <div class="container">
                             <div class="inner-wrapper">
                                <div class="block-heading text-right">
@@ -157,24 +205,24 @@
                             </div>
                         </div>
                     </section>                    
-				<section class="content-block">
-                        <div class="container">
-                          <div>
-                                <!--<h3 class="block-top-heading">JOIN TEAM JAIC</h3>-->
-                                <h2 class="block-main-heading">JAIC’S GUIDING TENETS</h2>
-                              <div class="divider-border mt-0"><span class="sr-only"></span></div>
-                            </div>
+					<section class="content-block">
+						<div class="container">
+				    		<div class="block-heading row bottom-space-small-only">
+								<div class="block-top-heading col-lg-12"><h3><strong>JAIC's Guiding Tenets</strong></h3><hr></div>
+								<hr>
+                              <!--<div class="divider-border mt-0"><span class="sr-only"></span></div>-->
+                          	</div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="bottom-space-small-only">
-                                        <p class="top-s-space"><h4>AI is critical to the future of United States’ national security, and the JAIC is the focal point for the execution of the DoD AI Strategy.</h4></p>
+                                        <p class="top-s-space"><h4 style="color: #409DD9">AI is critical to the future of United States’ national security, and the JAIC is the focal point for the execution of the DoD AI Strategy.</h4></p>
 										<p style="line-height: 22px">We acquire and develop mature AI technology by partnering across three key communities: the Armed Services and DoD Components; academia and commercial AI industry; and America’s international allies and partners.</p>
-                                        <p><h4>We exist to create and enable impact for the Armed Services and DoD Components across the full range of their missions – from the back office to the front lines of the battlefield.</h4></p>
+                                        <p><h4 style="color: #409DD9">We exist to create and enable impact for the Armed Services and DoD Components across the full range of their missions – from the back office to the front lines of the battlefield.</h4></p>
                                         <p style="line-height: 22px">The JAIC’s National Mission Initiatives (NMIs) and Component Mission Initiatives (CMIs) will directly deliver AI capability on behalf of the Armed Services and DoD Components. </p>
                                         <p style="line-height: 22px">The JAIC’s Joint Common Foundation (JCF) is a cloud-enabled AI platform that will accelerate the development, testing, and fielding of new AI capabilities. Use of a common AI platform with shared infrastructure resources ensures progress by one DoD AI initiative will build momentum across the entire DoD enterprise.</p>
-                                        <p><h4>Leadership in ethics and values is core to everything we do at the JAIC.</h4></p>
+                                        <p><h4 style="color: #409DD9">Leadership in ethics and values is core to everything we do at the JAIC.</h4></p>
 										<p style="line-height: 22px">We leverage AI innovations to build solutions that are aligned with America’s laws and values. The JAIC will deliver AI capabilities that help ensure our Nation’s safety and make our citizens proud.</p>
-										<p><h4>The JAIC attracts the best and brightest people from across DoD, commercial industry, and academia. When they get here, they are empowered to bring their expertise to the Department’s transformation.</h4></p>
+										<p><h4 style="color: #409DD9">The JAIC attracts the best and brightest people from across DoD, commercial industry, and academia. When they get here, they are empowered to bring their expertise to the Department’s transformation.</h4></p>
 										<p style="line-height: 22px">NMIs and CMIs are organized into Cross Functional Teams, mixing technical talent, domain subject matter experts, acquisition specialists, and program managers. We ensure our teams get direct access to end-user feedback and are empowered to make decisions in support of the JAIC’s mission.</p>
                                     </div>
                                 </div>
