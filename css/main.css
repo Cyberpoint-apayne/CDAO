@@ -4236,15 +4236,15 @@ em.state-invalid {
 }
 
 .btn.btn-secondary {
-	background: #ff6138;
+	background: #ffffff;
 	color: #fff;
-	border: .1429rem solid #ff6138;
+	border: .1429rem solid #ffffff;
 }
 
 .btn.btn-secondary:hover {
-	background: #eb3000;
+	background: #f99000;
 	color: #fff;
-	border-color: #eb3000;
+	border-color: #f99000;
 }
 
 .btn.btn-trans-gray {
@@ -5698,6 +5698,12 @@ pre {
 }
 .symposium-banner {
 	background-image: url('../img/washdc.jpg');
+}
+.symposium22EC-banner {
+	background-image: url('../img/digai2022_sm.png');
+}
+.symposium22aEC-banner {
+	background-image: url('../img/digai22g_bkg.png');
 }
 .symposium21EC-banner {
 	background-image: url('../img/ai2021_bkg.png');
