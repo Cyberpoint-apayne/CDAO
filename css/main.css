@@ -899,6 +899,35 @@ h5 {
 	color: #F8E808
 }
 
+h8 {
+	text-align: left;
+    line-height: 89px;
+    border-width: 0px;
+    margin: 0px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 89px;
+    white-space: normal;
+    min-height: 0px;
+    min-width: 1074px;
+    max-height: none;
+    max-width: 1074px;
+}
+
+h9 {
+	text-align: left;
+    line-height: 28px;
+    border-width: 0px;
+    margin: 0px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 26px;
+    white-space: normal;
+    min-height: 0px;
+    min-width: 899px;
+    max-height: none;
+    max-width: 899px;
+}
 .cursive-style {
 	font-family: 'Just Another Hand', cursive;
 }
@@ -5576,7 +5605,7 @@ pre {
 /******* parallax images styles *******/
 
 .visual-banner {
-	background-image: url('../img/visual-14.jpg');
+	background-image: url('../img/hero_img3.jpg');
 }
 
 .visual-banner-v2 {
