@@ -1,269 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@DoDJAIC" />
-	<meta name="twitter:title" content="AI in Defense - DoD's AI Blog" />
-	<meta name="twitter:description" content="Department of Defense's Artificial Intelligence Blog" />
-	<meta name="twitter:image" content="https://www.ai.mil/img/blogimg_10_28_20.png" /><title>Who owns cyber data?</title>
-	<meta name="twitter:image:alt" content="AI in Defense" /><title>Blog - 10_28_20 - Who owns cyber data?</title>
-	<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
-	<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOD" id="_fed_an_ua_tag"></script>
-    <!-- Flavicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<!-- Font Icons -->
-    <link media="all" rel="stylesheet" href="css/fonts/icomoon/icomoon.css">
-    <link media="all" rel="stylesheet" href="css/fonts/roxine-font-icon/roxine-font.css">
-    <link media="all" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.css">
-    <!-- Vendors -->
-    <link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.carousel.min.css">
-    <link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.theme.default.min.css">
-    <link media="all" rel="stylesheet" href="vendors/animate/animate.css">
-    <link media="all" rel="stylesheet" href="vendors/rateyo/jquery.rateyo.css">
-    <link media="all" rel="stylesheet" href="vendors/bootstrap-datepicker/css/bootstrap-datepicker.css">
-    <link media="all" rel="stylesheet" href="vendors/fancyBox/source/jquery.fancybox.css">
-    <link media="all" rel="stylesheet" href="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
-    <!-- Bootstrap 4 -->
-    <link media="all" rel="stylesheet" href="css/bootstrap.css">
-    <!-- Rev Slider -->
-    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/settings.css">
-    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/navigation.css">
-    <!-- Theme CSS -->
-    <link media="all" rel="stylesheet" href="css/main.css">
-    <!-- Custom CSS -->
-    <link media="all" rel="stylesheet" href="css/custom.css">
-	<script src="https://www.ai.mil/js/jquery-3.6.0.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@DoDJAIC" />
+<meta name="twitter:title" content="AI in Defense - DoD's AI Blog" />
+<meta name="twitter:description" content="Department of Defense's Artificial Intelligence Blog" />
+<meta name="twitter:image" content="https://www.ai.mil/img/blogimg_10_28_20.png" />
+<title>Who owns cyber data?</title>
+<meta name="twitter:image:alt" content="AI in Defense" />
+<title>Blog - 10_28_20 - Who owns cyber data?</title>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. --> 
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOD" id="_fed_an_ua_tag"></script> 
+<!-- Flavicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<!-- Font Icons -->
+<link media="all" rel="stylesheet" href="css/fonts/icomoon/icomoon.css">
+<link media="all" rel="stylesheet" href="css/fonts/roxine-font-icon/roxine-font.css">
+<link media="all" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.css">
+<!-- Vendors -->
+<link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.carousel.min.css">
+<link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.theme.default.min.css">
+<link media="all" rel="stylesheet" href="vendors/animate/animate.css">
+
+<link media="all" rel="stylesheet" href="vendors/bootstrap-datepicker/css/bootstrap-datepicker.css">
+<link media="all" rel="stylesheet" href="vendors/fancyBox/source/jquery.fancybox.css">
+<link media="all" rel="stylesheet" href="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
+<!-- Bootstrap 4 -->
+<link media="all" rel="stylesheet" href="css/bootstrap.css">
+<!-- Rev Slider -->
+<link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/settings.css">
+<link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/layers.css">
+<link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/navigation.css">
+<!-- Theme CSS -->
+<link media="all" rel="stylesheet" href="css/main.css">
+<!-- Custom CSS -->
+<link media="all" rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
-    <!-- main wrapper -->
-    <div id="wrapper">
-        <div class="page-wrapper">
-            <!-- header of the page -->
-		<div id="nav-placeholder">
-
+<!-- main wrapper -->
+<div id="wrapper">
+	<div class="page-wrapper"> 
+		<!-- header of the page --><div id="nav-placeholder"> 
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+	<div class="container-fluid"> <a class="navbar-brand"  href="cdao.html"> <img src="img/cdao_logo.png" alt="jaic"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item"> <a class="nav-link active" aria-current="page" href="cdao.html" rel="noopener noreferrer" data-title="Home">HOME</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="news_media.html" rel="noopener noreferrer" data-title="News/Media">NEWS/MEDIA</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="references.html" rel="noopener noreferrer" data-title="References">REFERENCES</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="blog.html" rel="noopener noreferrer" data-title="Blog">BLOG</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="careers.html" rel="noopener noreferrer" data-title="Careers">CAREERS</a> </li>
+			</ul>
+			<span class="dropdown" data-animation="fadeIn" style="color: #E07000"> <a class="btn btn-primary has-radius-small" href="digai2022.html" rel="noopener noreferrer" data-title="2022 DoD Digital and Artificial Intelligence Symposium"> DoD Digital &amp; AI Symposium </a> </span> 
 		</div>
-
-		<script>
-		$(function(){
-		  $("#nav-placeholder").load("header.html");
-		});
-		</script>
-            <!--/header of the page -->
-            <main>
-               <!-- visual/banner of the page -->
-                <section class="visual">
-                    <div class="visual-inner blog-banner black-overlay-0 parallax" data-stellar-background-ratio="0.55" style="height: 300px;">
-                    </div>
-                </section>
-                <!--/visual/banner of the page -->
-				<!-- main content wrapper -->
-                <div class="content-wrapper">
-                    <section class="content-block">
-                        <div class="container">
-                            <div class="row mt-5">
-                                <div class="col-lg-12 less-wide">
-                                    <div class="blog-holder">
-                                        <article class="blog-article">
-                                                <div class="blog-title text-center pb-5">
-                                                  <h1>Who Owns Cyber Data?</h1>
-                                                  <div class="blog-lists border-0">
-														  <ul class="blog-list-items">
-                                                            <li>By: JAIC Public Affairs</li>
-                                                            <li><time datetime="2020-10-28">28&nbsp; <span>OCT 2020</span> </time></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            <div class="blog-desc pt-5">
-                                                <div class="blog-img">
-                                                    <div class="image-wrap">
-                                                        <figure class="">
-                                                          <img src="img/blogimg_10_28_20.png" alt="">
-														</figure>
-														
-                                                    </div>
+	</div>
+</nav>
+</div><!--/header of the page -->
+		<main> 
+			<!-- visual/banner of the page -->
+			<section class="visual">
+				<div class="visual-inner blog-banner black-overlay-0 parallax" data-stellar-background-ratio="0.55" style="height: 300px;"> </div>
+			</section>
+			<!--/visual/banner of the page --> 
+			<!-- main content wrapper -->
+			<div class="content-wrapper">
+				<section class="content-block">
+					<div class="container">
+						<div class="row mt-5">
+							<div class="col-lg-12 less-wide">
+								<div class="blog-holder">
+									<article class="blog-article">
+										<div class="blog-title text-center pb-5">
+											<h1>Who Owns Cyber Data?</h1>
+											<div class="blog-lists border-0">
+												<ul class="blog-list-items">
+													<li>By: JAIC Public Affairs</li>
+													<li>
+														<time datetime="2020-10-28">28&nbsp; <span>OCT 2020</span> </time>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="blog-desc pt-5">
+											<div class="blog-img">
+												<div class="image-wrap">
+													<figure class=""> <img src="img/blogimg_10_28_20.png" alt=""> </figure>
 												</div>
-                                                <div class="blockquote-block">
-												<p>At my previous DoD research organization, if I asked a cybersecurity service provider (CSSP) for operational data to execute test and evaluation for an AI capability developed on synthetic data, they may have laughed at me. Not because I told a joke, but because there was no clear answer to who owned the data, and they did not know who to ask. This was three years ago when I set out on my quest to determine who owns DoD’s cyber data and who is authorized to make decisions about sharing data on behalf of data owners. The answer is often as complicated as the quest to find the Holy Grail.  
-
-Depending on who you ask, the data owner often varies:
-•	Services and combatant commands
-o	Mission Owners
-o	Combatant Commanders
-o	US CYBERCOMMAND
-•	DoD civilians 
-o	Sensor Owners 
-o	Organizational CIOs  
-o	Organizational that monitored the data, or configured the sensor to run
-o	Original computer owner that generated the traffic.  
-•	An individual in the Human Research Protection Office (HRPO) and Institutional Review Board (IRB) may infer that whoever generates the data owns it - that’s why study participants must sign a consent form.  
-
-Today, I am honored to lead the JAIC’s Joint Information Warfare mission initiative’s Field Study Team (FST). This is a new DoD concept, adopted from the private sector which has successfully used this approach for years. The FST takes a systematic approach with our DoD customers who desire access to AI capabilities that the JAIC is scaling across the Department, and more often than not, the question of data ownership is at the heart of this process. 
-
-The approach involves assessing a customer’s AI readiness by reviewing how their current system configurations and pain points align with their desired AI capabilities. We then match customers with AI capabilities that are tailored to the needs of their organization. As part of this process, the FST often takes on an advocacy role. This role is vital, and one that I enjoy, as the JAIC gets to know our customers and better understands their unique cyber data challenges. I am proud to amplify their voices to the highest levels of DoD policymaking. 
-
-Determining data stewardship is key to the important work occurring across the JAIC and DoD AI ecosystem. The recently released DoD Data Strategy says, “Data is a Strategic Asset – DoD data is a high-interest commodity and must be leveraged in a way that brings both immediate and lasting military advantage.” Specifically, when discussing data sets for AI training and algorithmic models, the strategy states that these data sets “will increasingly become the DoD’s most valuable digital assets and we must create a framework for managing them across the data lifecycle that provides protected visibility and responsible brokerage.” I am grateful for this strategy as a guidepost as we continue to determine who owns the operational data across the Department. 
-
-Back at the JAIC, the FST is working diligently with JAIC’s policy team, CDOs, and other key stakeholders to understand policies and identify who should work on these data ownership issues. This work is critical for our customers – and ourselves, as data access and sharing is truly where the rubber meets the road in order to scale AI.  As the JAIC accelerates the delivery of AI across the Department, our talented data engineers and scientists can only truly succeed if they have access to relevant operational data and the ability to seamlessly share it across organizations. 
-
-Over the past couple months, the FST has moved the needle significantly. We recently began engaging with the DoD’s Chief Data Officer and are establishing a regular battle rhythm. We also look forward to working closely with the JAIC’s policy team, bringing all of the knowledge gained during our assessments to bear in order to inform them and hopefully change policies that will ultimately minimize existing data ownership barriers. We anticipate our efforts will make it easier for other DoD organizations to share their operational cyber data with the JAIC and each other, as we work together to transform the Department through AI. 
-</p>
-														  <div class="blog-share mt-5">
-																<ul class="social-network with-text">
-																	<li><strong>Share :</strong></li>
-																	<!--<li><a href="#"><span class="icon-facebook"></span> Facebook</a></li>-->
-																	<li><a href="https://twitter.com/DoDJAIC" target="_blank"><span class="icon-twitter"></span> Twitter</a></li>
-																	<li><a href="https://www.linkedin.com/company/dod-joint-artificial-intelligence-center/" target="_blank"><span class="icon-linkedin"></span> LinkedIn</a></li>
-													 </ul>
-                                                </div>
-                                            </div>
-										  </div>
-                                        </article>
-                                    </div>
-										
-                                   </div>
-                                </div>
-                            </div>
-                    </section>
-                    </div>
-                    <!--/main content wrapper -->
-            </main>
-            </div>
-            <!-- footer of the pagse -->
-        <footer class="footer footer-v1"> 
-			<div class="content-block footer-main pb-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-2">
-                            <div class="footer-logo mt-2">
-                                <a href="index.html"><img src="img/jaic_logo.png" alt="jaic_logo"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <!--<div class="waituk_newsletter-form newsletter-v1 mt-2">
-                                <form action="#" method="post">
-                                    <fieldset class="clearfix">
-                                        <div class="form-group input-holder">
-                                            <input type="email" class="form-control" placeholder="Email Address">
-                                            <button type="submit" class="btn"><i class="fa fa-send"></i></button>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                            <div class="my-4">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                            </div>-->
-                        </div>
-                        <div class="col-lg-2">
-                            <h4>JAIC</h4>
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About The JAIC</a></li>
-                                    <li><a href="disclaimer.html" target="_blank">Disclaimer</a></li>
-                                    <li><a href="https://dodcio.defense.gov/DoDSection508/Std_Stmt.aspx" target="_blank">Accessibility</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <h4>Policies</h4>
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="https://www.nlrb.gov/reports/regulatory-reports-and-notices/no-fear-act" target="_blank">No Fear Act</a></li>
-                                    <li><a href="privacy_policy.html">Privacy</a></li>
-                                    <li><a href="https://iase.disa.mil/Pages/index.aspx/" target="_blank">Cybersecurity</a></li>
-                                    <li><a href="https://www.foia.gov/" target="_blank">FOIA</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <h4>Links</h4>
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="https://www.defense.gov" target="_blank">Defense.gov</a></li>
-                                    <li><a href="https://www.usa.gov" target="_blank">USA.gov</a></li>
-                                    <!--<li><a href="/careers">Careers</a></li>-->
-                                    <!--<li><a href="/contact">Contact Us</a></li>-->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-				</div>
-			<div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 pb-3">
-                            <p>© 2019 JAIC - Joint Artificial Intelligence Center </p>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="social-network with-text">
-                                <!--<li><a href="#"><span class="icon-facebook"></span></a></li>-->
-                                <li><a href="https://twitter.com/DoDJAIC" target="_blank"><span class="icon-twitter"></span></a></li>
-                                <!--<li><a href="#"><span class="icon-instagram"></span></a></li>-->
-                                <li><a href="https://www.linkedin.com/company/dod-joint-artificial-intelligence-center/" target="_blank"><span class="icon-linkedin"></span></a></li>
-                            </ul>
-                        </div>
+											</div>
+											<div class="blockquote-block">
+												<p>At my previous DoD research organization, if I asked a cybersecurity service provider (CSSP) for operational data to execute test and evaluation for an AI capability developed on synthetic data, they may have laughed at me. Not because I told a joke, but because there was no clear answer to who owned the data, and they did not know who to ask. This was three years ago when I set out on my quest to determine who owns DoD’s cyber data and who is authorized to make decisions about sharing data on behalf of data owners. The answer is often as complicated as the quest to find the Holy Grail.</p>
+												<p>Depending on who you ask, the data owner often varies:</p>
+												<ul>
+													<li>Services and combatant commands
+														<ul>
+															<li>Mission Owners</li>
+															<li>Combatant Commanders</li>
+															<li>US CYBERCOMMAND</li>
+														</ul>
+													</li>
+													<li>DoD civilians
+														<ul>
+															<li>Sensor Owners</li>
+															<li>Organizational CIOs</li>
+															<li>Organizational that monitored the data, or configured the sensor to run</li>
+															<li>Original computer owner that generated the traffic.</li>
+														</ul>
+													</li>
+													<li>An individual in the Human Research Protection Office (HRPO) and Institutional Review Board (IRB) may infer that whoever generates the data owns it - that's why study participants must sign a consent form.</li>
+												</ul>
+												<p>Today, I am honored to lead the JAIC’s Joint Information Warfare mission initiative’s Field Study Team (FST). This is a new DoD concept, adopted from the private sector which has successfully used this approach for years. The FST takes a systematic approach with our DoD customers who desire access to AI capabilities that the JAIC is scaling across the Department, and more often than not, the question of data ownership is at the heart of this process.</p>
+												<p>The approach involves assessing a customer’s AI readiness by reviewing how their current system configurations and pain points align with their desired AI capabilities. We then match customers with AI capabilities that are tailored to the needs of their organization. As part of this process, the FST often takes on an advocacy role. This role is vital, and one that I enjoy, as the JAIC gets to know our customers and better understands their unique cyber data challenges. I am proud to amplify their voices to the highest levels of DoD policymaking. </p>
+												<p>Determining data stewardship is key to the important work occurring across the JAIC and DoD AI ecosystem. The recently released DoD Data Strategy says, “Data is a Strategic Asset – DoD data is a high-interest commodity and must be leveraged in a way that brings both immediate and lasting military advantage.” Specifically, when discussing data sets for AI training and algorithmic models, the strategy states that these data sets “will increasingly become the DoD’s most valuable digital assets and we must create a framework for managing them across the data lifecycle that provides protected visibility and responsible brokerage.” I am grateful for this strategy as a guidepost as we continue to determine who owns the operational data across the Department. </p>
+												<p>Back at the JAIC, the FST is working diligently with JAIC’s policy team, CDOs, and other key stakeholders to understand policies and identify who should work on these data ownership issues. This work is critical for our customers – and ourselves, as data access and sharing is truly where the rubber meets the road in order to scale AI.  As the JAIC accelerates the delivery of AI across the Department, our talented data engineers and scientists can only truly succeed if they have access to relevant operational data and the ability to seamlessly share it across organizations.</p>
+												<p>Over the past couple months, the FST has moved the needle significantly. We recently began engaging with the DoD’s Chief Data Officer and are establishing a regular battle rhythm. We also look forward to working closely with the JAIC’s policy team, bringing all of the knowledge gained during our assessments to bear in order to inform them and hopefully change policies that will ultimately minimize existing data ownership barriers. We anticipate our efforts will make it easier for other DoD organizations to share their operational cyber data with the JAIC and each other, as we work together to transform the Department through AI. </p>
+												<div class="blog-share mt-5">
+													<ul class="social-network with-text">
+														<li><strong>Share :</strong></li>
+														<!--<li><a href="#"><span class="icon-facebook"></span> Facebook</a></li>-->
+														<li><a href="https://twitter.com/DoDJAIC" target="_blank"><span class="icon-twitter"></span> Twitter</a></li>
+														<li><a href="https://www.linkedin.com/company/dod-joint-artificial-intelligence-center/" target="_blank"><span class="icon-linkedin"></span> LinkedIn</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!--/main content wrapper --> 
+		</main>
+	</div>
+	<!-- footer of the page -->
+	<footer class="footer footer-v1">
+		<div class="content-block footer-main pb-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2">
+						<div class="footer-logo mt-2"> <a href="https://www.ai.mil/cdao.html"><img src="img/cdao_logo_sm_colorwht.png" alt="CDAO logo"></a> </div>
+					</div>
+					<div class="col-lg-4"> </div>
+					<div class="col-lg-2">
+						<h4>CDAO</h4>
+						<div class="footer-nav">
+							<ul>
+								<li><a href="cdao.html">Home</a></li>
+								<li><a href="disclaimer.html">Disclaimer</a></li>
+								<li><a href="https://dodcio.defense.gov/DoDSection508/Std_Stmt.aspx">Accessibility</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<h4>Policies</h4>
+						<div class="footer-nav">
+							<ul>
+								<li><a href="https://www.nlrb.gov/reports/regulatory-reports-and-notices/no-fear-act" target="_blank">No Fear Act</a></li>
+								<li><a href="privacy_policy.html">Privacy</a></li>
+								<li><a href="https://public.cyber.mil" target="_blank">Cybersecurity</a></li>
+								<li><a href="https://www.foia.gov/" target="_blank">FOIA</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<h4>Links</h4>
+						<div class="footer-nav">
+							<ul>
+								<li><a href="https://www.defense.gov" target="_blank">Defense.gov</a></li>
+								<li><a href="https://www.usa.gov" target="_blank">USA.gov</a></li>
+								<!--<li><a href="careers.html">Careers</a></li>--> 
+								<!--<li><a href="/contact">Contact Us</a></li>-->
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-        </footer>
-            <!--/footer of the page -->
-        </div>
-        <!-- search form wrapper -->
-        <div class="search-form-wrapper">
-            <a href="#" class="nav-search-link close"><span class="icon-android-close"></span></a>
-            <div class="holder">
-                <input type="search" class="form-control form-control-v1" placeholder="Enter Your Search">
-                <button type="submit"><span class="custom-icon-search"></span></button>
-            </div>
-        </div>
-        <a href="#" class="section-scroll" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
-        <!-- jquery library -->
-        <script src="https://www.ai.mil/js/jquery-3.6.0.min.js"></script>
-        <!-- external scripts -->
-        <script src="vendors/tether/dist/js/tether.min.js"></script>
-        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-        <script src="vendors/stellar/jquery.stellar.min.js"></script>
-        <script src="vendors/isotope/javascripts/isotope.pkgd.min.js"></script>
-        <script src="vendors/isotope/javascripts/packery-mode.pkgd.js"></script>
-        <script src="vendors/owl-carousel/dist/owl.carousel.js"></script>
-        <script src="vendors/waypoint/waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-        <script src="vendors/fancyBox/source/jquery.fancybox.pack.js"></script>
-        <script src="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
-        <script src="vendors/image-stretcher-master/image-stretcher.js"></script>
-        <script src="vendors/wow/wow.min.js"></script>
-        <script src="vendors/rateyo/jquery.rateyo.js"></script>
-        <script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-        <script src="vendors/bootstrap-slider-master/src/js/bootstrap-slider.js"></script>
-        <script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-        <script src="js/mega-menu.js"></script>
-        <!-- custom jquery script -->
-        <script src="js/jquery.main.js"></script>
-        <!-- REVOLUTION JS FILES -->
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
-        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <!-- SNOW ADD ON -->
-        <script type="text/javascript" src="vendors/rev-slider/revolution-addons/snow/revolution.addon.snow.min.js"></script>
-        <!-- revolutions slider script -->
-        <script src="js/revolution.js"></script>
-	</body>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 pb-3">
+							<p>© 2022 CDAO -  Chief Digital and Artificial Intelligence Office </p>
+						</div>
+						<div class="col-md-6">
+							<ul class="social-network with-text">
+								<!--<li><a href="#"><span class="icon-facebook"></span></a></li>-->
+								<li><a href="https://twitter.com/DODCDAO" target="_blank"><span class="icon-twitter"></span></a></li>
+								<!--<li><a href="#"><span class="icon-instagram"></span></a></li>-->
+								<li><a href="https://www.linkedin.com/company/dod-chief-digital-and-artificial-intelligence-office/" target="_blank"><span class="icon-linkedin"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--/footer of the page --> 
+</div>
+<!-- search form wrapper -->
+<div class="search-form-wrapper"> <a href="#" class="nav-search-link close"><span class="icon-android-close"></span></a>
+	<div class="holder">
+		<input type="search" class="form-control form-control-v1" placeholder="Enter Your Search">
+		<button type="submit"><span class="custom-icon-search"></span></button>
+	</div>
+</div>
+<a href="#" class="section-scroll" id="scroll-to-top"><i class="fa fa-angle-up"></i></a> 
+<!-- jquery library --> 
+<script src="js/jquery-3.6.1.min.js"></script> 
+<!-- external scripts --> 
+<script src="vendors/tether/dist/js/tether.min.js"></script> 
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script> 
+<script src="vendors/stellar/jquery.stellar.min.js"></script> 
+<script src="vendors/isotope/javascripts/isotope.pkgd.min.js"></script> 
+<script src="vendors/isotope/javascripts/packery-mode.pkgd.js"></script> 
+<script src="vendors/owl-carousel/dist/owl.carousel.js"></script> 
+<script src="vendors/waypoint/waypoints.min.js"></script> 
+<script src="vendors/counter-up/jquery.counterup.min.js"></script> 
+<script src="vendors/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<script src="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script> 
+<script src="vendors/image-stretcher-master/image-stretcher.js"></script> 
+<script src="vendors/wow/wow.min.js"></script> 
+<script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="vendors/bootstrap-slider-master/src/js/bootstrap-slider.js"></script> 
+<script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script> 
+<script src="js/mega-menu.js"></script> 
+<!-- custom jquery script --> 
+<script src="js/jquery.main.js"></script> 
+<!-- REVOLUTION JS FILES --> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.revolution.min.js"></script> 
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) --> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.video.min.js"></script> 
+<!-- SNOW ADD ON --> 
+<script type="text/javascript" src="vendors/rev-slider/revolution-addons/snow/revolution.addon.snow.min.js"></script> 
+<!-- revolutions slider script --> 
+<script src="js/revolution.js"></script>
+</body>
 </html>

@@ -1,365 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@DoDJAIC" />
-	<meta name="twitter:title" content="AI in Defense - DoD's AI Blog" />
-	<meta name="twitter:description" content="Department of Defense's Artificial Intelligence Blog" />
-	<meta name="twitter:image" content="https://www.ai.mil/img/blogimg_04_01_20_navwar.png" /><title>Shifting From Principles to Practice</title>
-	<meta name="twitter:image:alt" content="AI in Defense" />>
-    <title>Blog - 04_01_19 - The DoD AI Ethical Principles – Shifting From Principles to Practice - JAIC</title>
-	<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
-	<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOD" id="_fed_an_ua_tag"></script>
-    <!-- Flavicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<!-- Font Icons -->
-    <link media="all" rel="stylesheet" href="css/fonts/icomoon/icomoon.css">
-    <link media="all" rel="stylesheet" href="css/fonts/roxine-font-icon/roxine-font.css">
-    <link media="all" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.css">
-    <!-- Vendors -->
-    <link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.carousel.min.css">
-    <link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.theme.default.min.css">
-    <link media="all" rel="stylesheet" href="vendors/animate/animate.css">
-    <link media="all" rel="stylesheet" href="vendors/rateyo/jquery.rateyo.css">
-    <link media="all" rel="stylesheet" href="vendors/bootstrap-datepicker/css/bootstrap-datepicker.css">
-    <link media="all" rel="stylesheet" href="vendors/fancyBox/source/jquery.fancybox.css">
-    <link media="all" rel="stylesheet" href="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
-    <!-- Bootstrap 4 -->
-    <link media="all" rel="stylesheet" href="css/bootstrap.css">
-    <!-- Rev Slider -->
-    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/settings.css">
-    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/navigation.css">
-    <!-- Theme CSS -->
-    <link media="all" rel="stylesheet" href="css/main.css">
-    <!-- Custom CSS -->
-    <link media="all" rel="stylesheet" href="css/custom.css">
-	<script src="https://www.ai.mil/js/jquery-3.6.0.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@DoDJAIC" />
+<meta name="twitter:title" content="AI in Defense - DoD's AI Blog" />
+<meta name="twitter:description" content="Department of Defense's Artificial Intelligence Blog" />
+<meta name="twitter:image" content="https://www.ai.mil/img/blogimg_04_01_20_navwar.png" />
+<title>Shifting From Principles to Practice</title>
+<meta name="twitter:image:alt" content="AI in Defense" />
+<title>Blog - 04_01_19 - The DoD AI Ethical Principles – Shifting From Principles to Practice - JAIC</title>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. --> 
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOD" id="_fed_an_ua_tag"></script> 
+<!-- Flavicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<!-- Font Icons -->
+<link media="all" rel="stylesheet" href="css/fonts/icomoon/icomoon.css">
+<link media="all" rel="stylesheet" href="css/fonts/roxine-font-icon/roxine-font.css">
+<link media="all" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.css">
+<!-- Vendors -->
+<link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.carousel.min.css">
+<link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.theme.default.min.css">
+<link media="all" rel="stylesheet" href="vendors/animate/animate.css">
+
+<link media="all" rel="stylesheet" href="vendors/bootstrap-datepicker/css/bootstrap-datepicker.css">
+<link media="all" rel="stylesheet" href="vendors/fancyBox/source/jquery.fancybox.css">
+<link media="all" rel="stylesheet" href="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
+<!-- Bootstrap 4 -->
+<link media="all" rel="stylesheet" href="css/bootstrap.css">
+<!-- Rev Slider -->
+<link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/settings.css">
+<link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/layers.css">
+<link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/navigation.css">
+<!-- Theme CSS -->
+<link media="all" rel="stylesheet" href="css/main.css">
+<!-- Custom CSS -->
+<link media="all" rel="stylesheet" href="css/custom.css">
 </head>
-
 <body>
-    <!-- main wrapper -->
-    <div id="wrapper">
-        <div class="page-wrapper">
-	<!-- header of the page -->
-		<div id="nav-placeholder">
-
+<!-- main wrapper -->
+<div id="wrapper">
+	<div class="page-wrapper"> 
+		<!-- header of the page --><div id="nav-placeholder"> 
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+	<div class="container-fluid"> <a class="navbar-brand"  href="cdao.html"> <img src="img/cdao_logo.png" alt="jaic"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item"> <a class="nav-link active" aria-current="page" href="cdao.html" rel="noopener noreferrer" data-title="Home">HOME</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="news_media.html" rel="noopener noreferrer" data-title="News/Media">NEWS/MEDIA</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="references.html" rel="noopener noreferrer" data-title="References">REFERENCES</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="blog.html" rel="noopener noreferrer" data-title="Blog">BLOG</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="careers.html" rel="noopener noreferrer" data-title="Careers">CAREERS</a> </li>
+			</ul>
+			<span class="dropdown" data-animation="fadeIn" style="color: #E07000"> <a class="btn btn-primary has-radius-small" href="digai2022.html" rel="noopener noreferrer" data-title="2022 DoD Digital and Artificial Intelligence Symposium"> DoD Digital &amp; AI Symposium </a> </span> 
 		</div>
-
-		<script>
-		$(function(){
-		  $("#nav-placeholder").load("header.html");
-		});
-		</script>
-	<!--/header of the page -->
-            <main>
-               <!-- visual/banner of the page -->
-                <section class="visual">
-                    <div class="visual-inner blog-banner black-overlay-0 parallax" data-stellar-background-ratio="0.55" style="height: 300px;">
-                        <div class="centered">
-                            <div class="container">
-                                <div class="visual-text visual-center">
-                                    <!--<h1 class="visual-title visual-sub-title">THE JAIC BLOG</h1>
+	</div>
+</nav>
+</div><!--/header of the page -->
+		<main> 
+			<!-- visual/banner of the page -->
+			<section class="visual">
+				<div class="visual-inner blog-banner black-overlay-0 parallax" data-stellar-background-ratio="0.55" style="height: 300px;">
+					<div class="centered">
+						<div class="container">
+							<div class="visual-text visual-center"> 
+								<!--<h1 class="visual-title visual-sub-title">THE JAIC BLOG</h1>
 									<div class="breadcrumb-block">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="index.html"> Home </a></li>
-                                            <li class="breadcrumb-item"><a href="blog.html"> Blog </a></li>
-                                            <li class="breadcrumb-item active"> Capability Delivery</li>
-                                        </ol>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </section>
-                <!--/visual/banner of the page -->
-				<!-- main content wrapper -->
-                <div class="content-wrapper">
-                    <section class="content-block">
-                        <div class="container">
-                            <div class="row mt-5">
-                                <div class="col-lg-12 less-wide">
-                                    <div class="blog-holder">
-                                        <article class="blog-article">
-                                                <div class="blog-title text-center pb-5">
-                                                    <h1>The DoD AI Ethical Principles - <br> Shifting From Principles to Practice</h1>
-                                                    <div class="blog-lists border-0">
-                                                        <ul class="blog-list-items">
-                                                            <li>By: JAIC</li>
-                                                            <li>
-                                                                <time datetime="2019-04-01">01 <span>APR 2019</span> </time>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            <div class="blog-desc pt-5">
-                                                <div class="blog-img">
-                                                    <div class="image-wrap">
-                                                        <figure class="">
-                                                            <img src="img/blogimg_04_01_20.png" alt="Shifting From Principles to Practice"> 
-														</figure>
-                                                    </div>
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html"> Home </a></li>
+                          <li class="breadcrumb-item"><a href="blog.html"> Blog </a></li>
+                          <li class="breadcrumb-item active"> Capability Delivery</li>
+                      </ol>--> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--/visual/banner of the page --> 
+			<!-- main content wrapper -->
+			<div class="content-wrapper">
+				<section class="content-block">
+					<div class="container">
+						<div class="row mt-5">
+							<div class="col-lg-12 less-wide">
+								<div class="blog-holder">
+									<article class="blog-article">
+										<div class="blog-title text-center pb-5">
+											<h1>The DoD AI Ethical Principles - <br>
+												Shifting From Principles to Practice</h1>
+											<div class="blog-lists border-0">
+												<ul class="blog-list-items">
+													<li>By: JAIC</li>
+													<li>
+														<time datetime="2019-04-01">01 <span>APR 2019</span> </time>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="blog-desc pt-5">
+											<div class="blog-img">
+												<div class="image-wrap">
+													<figure class=""> <img src="img/blogimg_04_01_20.png" alt="Shifting From Principles to Practice"> </figure>
 												</div>
-                                                <div class="blockquote-block">
-													<blockquote>
-														<p> “Creating the principles is the easy part. It’s the implementation part that is the hard part.”</p>
-														<p><small>-	Lt. Gen. Jack Shanahan, JAIC Director</small></p>
-													</blockquote>
+											</div>
+											<div class="blockquote-block">
+												<blockquote>
+													<p> “Creating the principles is the easy part. It’s the implementation part that is the hard part.”</p>
+													<p><small>-	Lt. Gen. Jack Shanahan, JAIC Director</small></p>
+												</blockquote>
 												<p></p>
 												<p>A little over one month ago, the Secretary of Defense adopted <a href="https://www.ai.mil/docs/Ethical_Principles_for_Artificial_Intelligence.pdf" target="_blank">AI Ethical Principles for the Department of Defense. </a> As the DoD adopts AI technology from back-office functions to battlefield operations, there is a recognition that despite the benefits AI brings, there is also a risk of unintended consequences or harms. We have a moral imperative to mitigate the potential resulting harm. As such, the DoD’s adoption of AI Ethical Principles reaffirms a “commitment to upholding the highest ethical standards” and “responsible and lawful behavior.” And while the adoption of the principles may be new to the DoD, DoD ethical principles are grounded in the deep history of the value-based framework of the organization and the existing legal framework of the Law of War. </p>
 												<p>As General Shanahan, the director of the JAIC stated, in a recent press briefing, “creating the principles is the easy part. It’s the implementation part that is the hard part.” And that statement holds true not with just the DoD, but with every organization on this journey of adopting AI, ranging from small organizations to the big tech companies. </p>
 												<p>In the last month, the JAIC has been leading DoD’s conversation in shifting these principles to practice and implementation. Specifically, we are:
 												<ul>
-													<li>Establishing a DoD-wide Responsible AI Subcommittee.  The subcommittee is part of a boarder DoD AI Working Group and is an interdisciplinary group of individuals representing all of the major components of the DoD. These include each of the Services and the Joint Staff, DARPA, and from OSD, Research & Engineering, Testing & Evaluation, Acquisition & Sustainment, Policy, and the Office of the General Counsel.  This subcommittee kicked-off in early March and has already met twice.  This group is tasked to inform the development of a more detailed DoD policy document, which will lay out an ethical and legal framework mapping the DoD AI Principles to the AI product life cycle and acquisition process, as well considering risk analyses, governance structure, and more.  As the subcommittee develops its work product, external subject matter experts will be engaged in the process.</li>
-
-												  <li>Using the JAIC’s Acquisition & Sustainment process to engage how our partners design, develop, and deploy technologies for the DoD. In early March, the JAIC issued its first RFP, Joint Warfighting National Mission Initiative, which included the DoD AI Ethical Principles as ‘Applicable Standards’ under the Performance Work Statement Section.  Respondents are to provide documentation on “how the development of [their] product considered and achieved/mitigated the issues raised within the … AI Ethics Principles.”  While this is just an initial step, we look to engage our industry partners and other stakeholders specifically in the acquisition process to more broadly determine what it means to operationalize these principles as well as define corresponding evaluation criteria.</li>
-
-													<li>Piloting a “Responsible AI Champions” cohort within the JAIC.  This inaugural cohort is a cross-functional group of individuals embedded within strategic areas representing the AI product lifecycle, such as product (design & development), testing & evaluation/verification & validation, and acquisition teams.  These individuals will receive training on AI and the DoD AI Ethical Principles with a focus on the application of the principles throughout the AI product lifecycle as well as operationally on and off the field.  The intent is for these individuals to return to their respective work areas and champion implementation practices and processes that embody the DoD principles.  In addition, they will act as the organization’s eyes and ears on the ground to identify new implementation opportunities as well as escalate any concerns.  As the Champions advise, educate, and inform their immediate team members, it will create muscle memory for all team members to initiate and engage in a broader dialogue around the principles and the technology.</li>
+													<li>Establishing a DoD-wide Responsible AI Subcommittee.  The subcommittee is part of a boarder DoD AI Working Group and is an interdisciplinary group of individuals representing all of the major components of the DoD. These include each of the Services and the Joint Staff, DARPA, and from OSD, Research &amp; Engineering, Testing &amp; Evaluation, Acquisition &amp; Sustainment, Policy, and the Office of the General Counsel.  This subcommittee kicked-off in early March and has already met twice.  This group is tasked to inform the development of a more detailed DoD policy document, which will lay out an ethical and legal framework mapping the DoD AI Principles to the AI product life cycle and acquisition process, as well considering risk analyses, governance structure, and more.  As the subcommittee develops its work product, external subject matter experts will be engaged in the process.</li>
+													<li>Using the JAIC’s Acquisition &amp; Sustainment process to engage how our partners design, develop, and deploy technologies for the DoD. In early March, the JAIC issued its first RFP, Joint Warfighting National Mission Initiative, which included the DoD AI Ethical Principles as ‘Applicable Standards’ under the Performance Work Statement Section.  Respondents are to provide documentation on “how the development of [their] product considered and achieved/mitigated the issues raised within the … AI Ethics Principles.”  While this is just an initial step, we look to engage our industry partners and other stakeholders specifically in the acquisition process to more broadly determine what it means to operationalize these principles as well as define corresponding evaluation criteria.</li>
+													<li>Piloting a “Responsible AI Champions” cohort within the JAIC.  This inaugural cohort is a cross-functional group of individuals embedded within strategic areas representing the AI product lifecycle, such as product (design &amp; development), testing &amp; evaluation/verification &amp; validation, and acquisition teams.  These individuals will receive training on AI and the DoD AI Ethical Principles with a focus on the application of the principles throughout the AI product lifecycle as well as operationally on and off the field.  The intent is for these individuals to return to their respective work areas and champion implementation practices and processes that embody the DoD principles.  In addition, they will act as the organization’s eyes and ears on the ground to identify new implementation opportunities as well as escalate any concerns.  As the Champions advise, educate, and inform their immediate team members, it will create muscle memory for all team members to initiate and engage in a broader dialogue around the principles and the technology.</li>
 												</ul>
 												</p>
-												<p>These are just some examples of how we are operationalizing the DoD AI Ethical Principles.  There are many other efforts currently occurring that also contribute to building out our broader DoD AI ethics ecosystem, from developing data cards, to creating a Data Governance Council to collaborating with other U.S. Government agencies and our Allies.  As we go forward, we will further engage a broader and diverse group of stakeholders to help inform our efforts.</p>  
-												<p>We are excited to embark on this journey and recognize that there will be iterations and pivots along the way, as to be expected with any new endeavor.  The DoD’s commitment to implementation of its AI Ethical Principles is steadfast and the passion and energy of the individuals working on this from all areas across the DoD is inspiring!
-												</p>
-
-
-                                                <div class="blog-share mt-5">
-                                                    <ul class="social-network with-text">
-                                                        <li><strong>Share :</strong></li>
-                                                        <!--<li><a href="#"><span class="icon-facebook"></span> Facebook</a></li>-->
-                                                        <li><a href="https://twitter.com/DoDJAIC" target="_blank"><span class="icon-twitter"></span> Twitter</a></li>
-                                                        <li><a href="https://www.linkedin.com/company/dod-joint-artificial-intelligence-center/" target="_blank"><span class="icon-linkedin"></span> LinkedIn</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <!--<div class="content-block pt-5 pb-5">
-                                        <div class="comment-block">
-                                            <h6 class="content-title contact-title mb-3">3 Comments</h6>
-                                            <div class="comment-slot">
-                                                <div class="thumb circular-img">
-                                                    <a href="#"><img src="img/people-01.jpg" alt="images description"></a>
-                                                </div>
-                                                <div class="comment-desc">
-                                                    <h5><a href="#">Cleona Torez - Spain</a></h5>
-                                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.</p>
-                                                    <div class="meta">Commented on
-                                                        <time datetime="2016-07-19">14/1/2016</time> - <a href="#">Reply</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="comment-slot">
-                                                <div class="thumb circular-img">
-                                                    <a href="#"><img src="img/people-02.jpg" alt="images description"></a>
-                                                </div>
-                                                <div class="comment-desc">
-                                                    <h5><a href="#">Steve Jurgen - Norway</a></h5>
-                                                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.</p>
-                                                    <div class="meta">Commented on
-                                                        <time datetime="2016-07-19">14/1/2016</time> - <a href="#">Reply</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="contact-container">
-                                        <form action="#" class="comment-form waituk_contact-form">
-                                            <fieldset>
-                                                <h6 class="content-title contact-title">LEAVE YOUR COMMENT</h6>
-                                                <div class="row">
-                                                    <div class="col-sm-6 form-group">
-                                                        <input placeholder="Full Name" type="text" class="form-control">
-                                                    </div>
-                                                    <div class="col-sm-6 form-group">
-                                                        <input placeholder="Email Address" type="email" class="form-control">
-                                                    </div>
-                                                    <div class="col-sm-12 form-group">
-                                                        <input placeholder="Website" type="text" class="form-control">
-                                                    </div>
-                                                    <div class="col-sm-12 form-group">
-                                                        <textarea placeholder="Your Comment" class="form-control"></textarea>
-                                                    </div>
-                                                    <div class="col-sm-12 btn-holder">
-                                                        <button type="submit" class="btn btn-black btn-full">POST COMMENT</button>
-                                                    </div>
-                                            </fieldset>
-                                        </form>
-                                        </div>-->
-                                    </div>
+												<p>These are just some examples of how we are operationalizing the DoD AI Ethical Principles.  There are many other efforts currently occurring that also contribute to building out our broader DoD AI ethics ecosystem, from developing data cards, to creating a Data Governance Council to collaborating with other U.S. Government agencies and our Allies.  As we go forward, we will further engage a broader and diverse group of stakeholders to help inform our efforts.</p>
+												<p>We are excited to embark on this journey and recognize that there will be iterations and pivots along the way, as to be expected with any new endeavor.  The DoD’s commitment to implementation of its AI Ethical Principles is steadfast and the passion and energy of the individuals working on this from all areas across the DoD is inspiring! </p>
+												<div class="blog-share mt-5">
+													<ul class="social-network with-text">
+														<li><strong>Share :</strong></li>
+														<!--<li><a href="#"><span class="icon-facebook"></span> Facebook</a></li>-->
+														<li><a href="https://twitter.com/DoDJAIC" target="_blank"><span class="icon-twitter"></span> Twitter</a></li>
+														<li><a href="https://www.linkedin.com/company/dod-joint-artificial-intelligence-center/" target="_blank"><span class="icon-linkedin"></span> LinkedIn</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+									<!--<div class="content-block pt-5 pb-5">
+                    <div class="comment-block">
+                        <h6 class="content-title contact-title mb-3">3 Comments</h6>
+                        <div class="comment-slot">
+                            <div class="thumb circular-img">
+                                <a href="#"><img src="img/people-01.jpg" alt="images description"></a>
+                            </div>
+                            <div class="comment-desc">
+                                <h5><a href="#">Cleona Torez - Spain</a></h5>
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.</p>
+                                <div class="meta">Commented on
+                                    <time datetime="2016-07-19">14/1/2016</time> - <a href="#">Reply</a>
                                 </div>
                             </div>
-                    </section>
-                    </div>
-                    <!--/main content wrapper -->
-            </main>
-            </div>
-            <!-- footer of the pagse -->
-        <footer class="footer footer-v1">
-            <!--<div class="content-block footer-main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="footer-logo text-left">
-                                <img src="img/jaic_logo.png" alt="jaic_logo">
-                            </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="footer-nav inline-nav text-center">
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Social</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                </ul>
+                        <div class="comment-slot">
+                            <div class="thumb circular-img">
+                                <a href="#"><img src="img/people-02.jpg" alt="images description"></a>
                             </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <ul class="social-network with-text">
-                                <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                <li><a href="#"><span class="icon-instagram"></span></a></li>
-                                <li><a href="#"><span class="icon-linkedin-1"></span></a></li>
-                            </ul>
+                            <div class="comment-desc">
+                                <h5><a href="#">Steve Jurgen - Norway</a></h5>
+                                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.</p>
+                                <div class="meta">Commented on
+                                    <time datetime="2016-07-19">14/1/2016</time> - <a href="#">Reply</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-bottom text-center">
-                <div class="container">
-                  <p>© 2019 JAIC - Joint Artificial Intelligence Center </p>
-                </div>
-            </div>-->
-			<div class="content-block footer-main pb-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-2">
-                            <div class="footer-logo mt-2">
-                                <a href="index.html"><img src="img/jaic_logo.png" alt="jaic_logo"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <!--<div class="waituk_newsletter-form newsletter-v1 mt-2">
-                                <form action="#" method="post">
-                                    <fieldset class="clearfix">
-                                        <div class="form-group input-holder">
-                                            <input type="email" class="form-control" placeholder="Email Address">
-                                            <button type="submit" class="btn"><i class="fa fa-send"></i></button>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                            <div class="my-4">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                            </div>-->
-                        </div>
-                        <div class="col-lg-2">
-                            <h4>JAIC</h4>
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About JAIC</a></li>
-                                    <li><a href="disclaimer.html" target="_blank">Disclaimer</a></li>
-                                    <li><a href="https://dodcio.defense.gov/DoDSection508/Std_Stmt.aspx" target="_blank">Accessibility</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <h4>Policies</h4>
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="https://www.nlrb.gov/reports/regulatory-reports-and-notices/no-fear-act" target="_blank">No Fear Act</a></li>
-                                    <li><a href="privacy_policy.html">Privacy</a></li>
-                                    <li><a href="https://iase.disa.mil/Pages/index.aspx/" target="_blank">Cybersecurity</a></li>
-                                    <li><a href="https://www.foia.gov/" target="_blank">FOIA</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <h4>Links</h4>
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="https://www.defense.gov" target="_blank">Defense.gov</a></li>
-                                    <li><a href="https://www.usa.gov" target="_blank">USA.gov</a></li>
-                                    <!--<li><a href="/careers">Careers</a></li>-->
-                                    <!--<li><a href="/contact">Contact Us</a></li>-->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-				</div>
-			<div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 pb-3">
-                            <p>© 2019 JAIC - Joint Artificial Intelligence Center </p>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="social-network with-text">
-                                <!--<li><a href="#"><span class="icon-facebook"></span></a></li>-->
-                                <li><a href="https://twitter.com/DoDJAIC" target="_blank"><span class="icon-twitter"></span></a></li>
-                                <!--<li><a href="#"><span class="icon-instagram"></span></a></li>-->
-                                <li><a href="https://www.linkedin.com/company/dod-joint-artificial-intelligence-center/" target="_blank"><span class="icon-linkedin"></span></a></li>
-                            </ul>
-                        </div>
+                <div class="contact-container">
+                    <form action="#" class="comment-form waituk_contact-form">
+                        <fieldset>
+                            <h6 class="content-title contact-title">LEAVE YOUR COMMENT</h6>
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <input placeholder="Full Name" type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <input placeholder="Email Address" type="email" class="form-control">
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                    <input placeholder="Website" type="text" class="form-control">
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                    <textarea placeholder="Your Comment" class="form-control"></textarea>
+                                </div>
+                                <div class="col-sm-12 btn-holder">
+                                    <button type="submit" class="btn btn-black btn-full">POST COMMENT</button>
+                                </div>
+                        </fieldset>
+                    </form>
+                    </div>--> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!--/main content wrapper --> 
+		</main>
+	</div>
+	<!-- footer of the page -->
+	<footer class="footer footer-v1">
+		<div class="content-block footer-main pb-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2">
+						<div class="footer-logo mt-2"> <a href="https://www.ai.mil/cdao.html"><img src="img/cdao_logo_sm_colorwht.png" alt="CDAO logo"></a> </div>
+					</div>
+					<div class="col-lg-4"> </div>
+					<div class="col-lg-2">
+						<h4>CDAO</h4>
+						<div class="footer-nav">
+							<ul>
+								<li><a href="cdao.html">Home</a></li>
+								<li><a href="disclaimer.html">Disclaimer</a></li>
+								<li><a href="https://dodcio.defense.gov/DoDSection508/Std_Stmt.aspx">Accessibility</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<h4>Policies</h4>
+						<div class="footer-nav">
+							<ul>
+								<li><a href="https://www.nlrb.gov/reports/regulatory-reports-and-notices/no-fear-act" target="_blank">No Fear Act</a></li>
+								<li><a href="privacy_policy.html">Privacy</a></li>
+								<li><a href="https://public.cyber.mil" target="_blank">Cybersecurity</a></li>
+								<li><a href="https://www.foia.gov/" target="_blank">FOIA</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<h4>Links</h4>
+						<div class="footer-nav">
+							<ul>
+								<li><a href="https://www.defense.gov" target="_blank">Defense.gov</a></li>
+								<li><a href="https://www.usa.gov" target="_blank">USA.gov</a></li>
+								<!--<li><a href="careers.html">Careers</a></li>--> 
+								<!--<li><a href="/contact">Contact Us</a></li>-->
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-        </footer>
-            <!--/footer of the page -->
-        </div>
-        <!-- search form wrapper -->
-        <div class="search-form-wrapper">
-            <a href="#" class="nav-search-link close"><span class="icon-android-close"></span></a>
-            <div class="holder">
-                <input type="search" class="form-control form-control-v1" placeholder="Enter Your Search">
-                <button type="submit"><span class="custom-icon-search"></span></button>
-            </div>
-        </div>
-        <a href="#" class="section-scroll" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
-        <!-- jquery library -->
-        <script src="https://www.ai.mil/js/jquery-3.6.0.min.js"></script>
-        <!-- external scripts -->
-        <script src="vendors/tether/dist/js/tether.min.js"></script>
-        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-        <script src="vendors/stellar/jquery.stellar.min.js"></script>
-        <script src="vendors/isotope/javascripts/isotope.pkgd.min.js"></script>
-        <script src="vendors/isotope/javascripts/packery-mode.pkgd.js"></script>
-        <script src="vendors/owl-carousel/dist/owl.carousel.js"></script>
-        <script src="vendors/waypoint/waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-        <script src="vendors/fancyBox/source/jquery.fancybox.pack.js"></script>
-        <script src="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
-        <script src="vendors/image-stretcher-master/image-stretcher.js"></script>
-        <script src="vendors/wow/wow.min.js"></script>
-        <script src="vendors/rateyo/jquery.rateyo.js"></script>
-        <script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-        <script src="vendors/bootstrap-slider-master/src/js/bootstrap-slider.js"></script>
-        <script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-        <script src="js/mega-menu.js"></script>
-        <!-- custom jquery script -->
-        <script src="js/jquery.main.js"></script>
-        <!-- REVOLUTION JS FILES -->
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
-        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <!-- SNOW ADD ON -->
-        <script type="text/javascript" src="vendors/rev-slider/revolution-addons/snow/revolution.addon.snow.min.js"></script>
-        <!-- revolutions slider script -->
-        <script src="js/revolution.js"></script>
-
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 pb-3">
+							<p>© 2022 CDAO -  Chief Digital and Artificial Intelligence Office </p>
+						</div>
+						<div class="col-md-6">
+							<ul class="social-network with-text">
+								<!--<li><a href="#"><span class="icon-facebook"></span></a></li>-->
+								<li><a href="https://twitter.com/DODCDAO" target="_blank"><span class="icon-twitter"></span></a></li>
+								<!--<li><a href="#"><span class="icon-instagram"></span></a></li>-->
+								<li><a href="https://www.linkedin.com/company/dod-chief-digital-and-artificial-intelligence-office/" target="_blank"><span class="icon-linkedin"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--/footer of the page --> 
+</div>
+<!-- search form wrapper -->
+<div class="search-form-wrapper"> <a href="#" class="nav-search-link close"><span class="icon-android-close"></span></a>
+	<div class="holder">
+		<input type="search" class="form-control form-control-v1" placeholder="Enter Your Search">
+		<button type="submit"><span class="custom-icon-search"></span></button>
+	</div>
+</div>
+<a href="#" class="section-scroll" id="scroll-to-top"><i class="fa fa-angle-up"></i></a> 
+<!-- jquery library --> 
+<script src="js/jquery-3.6.1.min.js"></script> 
+<!-- external scripts --> 
+<script src="vendors/tether/dist/js/tether.min.js"></script> 
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script> 
+<script src="vendors/stellar/jquery.stellar.min.js"></script> 
+<script src="vendors/isotope/javascripts/isotope.pkgd.min.js"></script> 
+<script src="vendors/isotope/javascripts/packery-mode.pkgd.js"></script> 
+<script src="vendors/owl-carousel/dist/owl.carousel.js"></script> 
+<script src="vendors/waypoint/waypoints.min.js"></script> 
+<script src="vendors/counter-up/jquery.counterup.min.js"></script> 
+<script src="vendors/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<script src="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script> 
+<script src="vendors/image-stretcher-master/image-stretcher.js"></script> 
+<script src="vendors/wow/wow.min.js"></script> 
+<script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="vendors/bootstrap-slider-master/src/js/bootstrap-slider.js"></script> 
+<script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script> 
+<script src="js/mega-menu.js"></script> 
+<!-- custom jquery script --> 
+<script src="js/jquery.main.js"></script> 
+<!-- REVOLUTION JS FILES --> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.revolution.min.js"></script> 
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) --> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.video.min.js"></script> 
+<!-- SNOW ADD ON --> 
+<script type="text/javascript" src="vendors/rev-slider/revolution-addons/snow/revolution.addon.snow.min.js"></script> 
+<!-- revolutions slider script --> 
+<script src="js/revolution.js"></script>
+</body>
 </html>

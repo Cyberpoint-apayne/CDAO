@@ -1,497 +1,471 @@
-import Util from './util'
+/*!
+  * Bootstrap carousel.js v5.2.1 (https://getbootstrap.com/)
+  * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+  */
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./util/index'), require('./dom/event-handler'), require('./dom/manipulator'), require('./dom/selector-engine'), require('./util/swipe'), require('./base-component')) :
+  typeof define === 'function' && define.amd ? define(['./util/index', './dom/event-handler', './dom/manipulator', './dom/selector-engine', './util/swipe', './base-component'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Carousel = factory(global.Index, global.EventHandler, global.Manipulator, global.SelectorEngine, global.Swipe, global.BaseComponent));
+})(this, (function (index, EventHandler, Manipulator, SelectorEngine, Swipe, BaseComponent) { 'use strict';
 
+  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): carousel.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * --------------------------------------------------------------------------
- */
-
-const Carousel = (($) => {
-
+  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+  const Swipe__default = /*#__PURE__*/_interopDefaultLegacy(Swipe);
+  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
   /**
-   * ------------------------------------------------------------------------
+   * --------------------------------------------------------------------------
+   * Bootstrap (v5.2.1): carousel.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+  /**
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  const NAME                = 'carousel'
-  const VERSION             = '4.0.0-alpha.6'
-  const DATA_KEY            = 'bs.carousel'
-  const EVENT_KEY           = `.${DATA_KEY}`
-  const DATA_API_KEY        = '.data-api'
-  const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  const TRANSITION_DURATION = 600
-  const ARROW_LEFT_KEYCODE  = 37 // KeyboardEvent.which value for left arrow key
-  const ARROW_RIGHT_KEYCODE = 39 // KeyboardEvent.which value for right arrow key
+  const NAME = 'carousel';
+  const DATA_KEY = 'bs.carousel';
+  const EVENT_KEY = `.${DATA_KEY}`;
+  const DATA_API_KEY = '.data-api';
+  const ARROW_LEFT_KEY = 'ArrowLeft';
+  const ARROW_RIGHT_KEY = 'ArrowRight';
+  const TOUCHEVENT_COMPAT_WAIT = 500; // Time for mouse compat events to fire after touch
 
+  const ORDER_NEXT = 'next';
+  const ORDER_PREV = 'prev';
+  const DIRECTION_LEFT = 'left';
+  const DIRECTION_RIGHT = 'right';
+  const EVENT_SLIDE = `slide${EVENT_KEY}`;
+  const EVENT_SLID = `slid${EVENT_KEY}`;
+  const EVENT_KEYDOWN = `keydown${EVENT_KEY}`;
+  const EVENT_MOUSEENTER = `mouseenter${EVENT_KEY}`;
+  const EVENT_MOUSELEAVE = `mouseleave${EVENT_KEY}`;
+  const EVENT_DRAG_START = `dragstart${EVENT_KEY}`;
+  const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`;
+  const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
+  const CLASS_NAME_CAROUSEL = 'carousel';
+  const CLASS_NAME_ACTIVE = 'active';
+  const CLASS_NAME_SLIDE = 'slide';
+  const CLASS_NAME_END = 'carousel-item-end';
+  const CLASS_NAME_START = 'carousel-item-start';
+  const CLASS_NAME_NEXT = 'carousel-item-next';
+  const CLASS_NAME_PREV = 'carousel-item-prev';
+  const SELECTOR_ACTIVE = '.active';
+  const SELECTOR_ITEM = '.carousel-item';
+  const SELECTOR_ACTIVE_ITEM = SELECTOR_ACTIVE + SELECTOR_ITEM;
+  const SELECTOR_ITEM_IMG = '.carousel-item img';
+  const SELECTOR_INDICATORS = '.carousel-indicators';
+  const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
+  const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
+  const KEY_TO_DIRECTION = {
+    [ARROW_LEFT_KEY]: DIRECTION_RIGHT,
+    [ARROW_RIGHT_KEY]: DIRECTION_LEFT
+  };
   const Default = {
-    interval : 5000,
-    keyboard : true,
-    slide    : false,
-    pause    : 'hover',
-    wrap     : true
-  }
-
+    interval: 5000,
+    keyboard: true,
+    pause: 'hover',
+    ride: false,
+    touch: true,
+    wrap: true
+  };
   const DefaultType = {
-    interval : '(number|boolean)',
-    keyboard : 'boolean',
-    slide    : '(boolean|string)',
-    pause    : '(string|boolean)',
-    wrap     : 'boolean'
-  }
-
-  const Direction = {
-    NEXT     : 'next',
-    PREV     : 'prev',
-    LEFT     : 'left',
-    RIGHT    : 'right'
-  }
-
-  const Event = {
-    SLIDE          : `slide${EVENT_KEY}`,
-    SLID           : `slid${EVENT_KEY}`,
-    KEYDOWN        : `keydown${EVENT_KEY}`,
-    MOUSEENTER     : `mouseenter${EVENT_KEY}`,
-    MOUSELEAVE     : `mouseleave${EVENT_KEY}`,
-    LOAD_DATA_API  : `load${EVENT_KEY}${DATA_API_KEY}`,
-    CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`
-  }
-
-  const ClassName = {
-    CAROUSEL : 'carousel',
-    ACTIVE   : 'active',
-    SLIDE    : 'slide',
-    RIGHT    : 'carousel-item-right',
-    LEFT     : 'carousel-item-left',
-    NEXT     : 'carousel-item-next',
-    PREV     : 'carousel-item-prev',
-    ITEM     : 'carousel-item'
-  }
-
-  const Selector = {
-    ACTIVE      : '.active',
-    ACTIVE_ITEM : '.active.carousel-item',
-    ITEM        : '.carousel-item',
-    NEXT_PREV   : '.carousel-item-next, .carousel-item-prev',
-    INDICATORS  : '.carousel-indicators',
-    DATA_SLIDE  : '[data-slide], [data-slide-to]',
-    DATA_RIDE   : '[data-ride="carousel"]'
-  }
-
-
+    interval: '(number|boolean)',
+    // TODO:v6 remove boolean support
+    keyboard: 'boolean',
+    pause: '(string|boolean)',
+    ride: '(boolean|string)',
+    touch: 'boolean',
+    wrap: 'boolean'
+  };
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
-  class Carousel {
-
+  class Carousel extends BaseComponent__default.default {
     constructor(element, config) {
-      this._items             = null
-      this._interval          = null
-      this._activeElement     = null
+      super(element, config);
+      this._interval = null;
+      this._activeElement = null;
+      this._isSliding = false;
+      this.touchTimeout = null;
+      this._swipeHelper = null;
+      this._indicatorsElement = SelectorEngine__default.default.findOne(SELECTOR_INDICATORS, this._element);
 
-      this._isPaused          = false
-      this._isSliding         = false
+      this._addEventListeners();
 
-      this._config            = this._getConfig(config)
-      this._element           = $(element)[0]
-      this._indicatorsElement = $(this._element).find(Selector.INDICATORS)[0]
+      if (this._config.ride === CLASS_NAME_CAROUSEL) {
+        this.cycle();
+      }
+    } // Getters
 
-      this._addEventListeners()
-    }
-
-
-    // getters
-
-    static get VERSION() {
-      return VERSION
-    }
 
     static get Default() {
-      return Default
+      return Default;
     }
 
+    static get DefaultType() {
+      return DefaultType;
+    }
 
-    // public
+    static get NAME() {
+      return NAME;
+    } // Public
+
 
     next() {
-      if (this._isSliding) {
-        throw new Error('Carousel is sliding')
-      }
-      this._slide(Direction.NEXT)
+      this._slide(ORDER_NEXT);
     }
 
     nextWhenVisible() {
+      // FIXME TODO use `document.visibilityState`
       // Don't call next when the page isn't visible
-      if (!document.hidden) {
-        this.next()
+      // or the carousel or its parent isn't visible
+      if (!document.hidden && index.isVisible(this._element)) {
+        this.next();
       }
     }
 
     prev() {
+      this._slide(ORDER_PREV);
+    }
+
+    pause() {
       if (this._isSliding) {
-        throw new Error('Carousel is sliding')
+        index.triggerTransitionEnd(this._element);
       }
-      this._slide(Direction.PREVIOUS)
+
+      this._clearInterval();
     }
 
-    pause(event) {
-      if (!event) {
-        this._isPaused = true
-      }
+    cycle() {
+      this._clearInterval();
 
-      if ($(this._element).find(Selector.NEXT_PREV)[0] &&
-        Util.supportsTransitionEnd()) {
-        Util.triggerTransitionEnd(this._element)
-        this.cycle(true)
-      }
+      this._updateInterval();
 
-      clearInterval(this._interval)
-      this._interval = null
+      this._interval = setInterval(() => this.nextWhenVisible(), this._config.interval);
     }
 
-    cycle(event) {
-      if (!event) {
-        this._isPaused = false
+    _maybeEnableCycle() {
+      if (!this._config.ride) {
+        return;
       }
 
-      if (this._interval) {
-        clearInterval(this._interval)
-        this._interval = null
+      if (this._isSliding) {
+        EventHandler__default.default.one(this._element, EVENT_SLID, () => this.cycle());
+        return;
       }
 
-      if (this._config.interval && !this._isPaused) {
-        this._interval = setInterval(
-          (document.visibilityState ? this.nextWhenVisible : this.next).bind(this),
-          this._config.interval
-        )
-      }
+      this.cycle();
     }
 
     to(index) {
-      this._activeElement = $(this._element).find(Selector.ACTIVE_ITEM)[0]
+      const items = this._getItems();
 
-      const activeIndex = this._getItemIndex(this._activeElement)
-
-      if (index > this._items.length - 1 || index < 0) {
-        return
+      if (index > items.length - 1 || index < 0) {
+        return;
       }
 
       if (this._isSliding) {
-        $(this._element).one(Event.SLID, () => this.to(index))
-        return
+        EventHandler__default.default.one(this._element, EVENT_SLID, () => this.to(index));
+        return;
       }
+
+      const activeIndex = this._getItemIndex(this._getActive());
 
       if (activeIndex === index) {
-        this.pause()
-        this.cycle()
-        return
+        return;
       }
 
-      const direction = index > activeIndex ?
-        Direction.NEXT :
-        Direction.PREVIOUS
+      const order = index > activeIndex ? ORDER_NEXT : ORDER_PREV;
 
-      this._slide(direction, this._items[index])
+      this._slide(order, items[index]);
     }
 
     dispose() {
-      $(this._element).off(EVENT_KEY)
-      $.removeData(this._element, DATA_KEY)
+      if (this._swipeHelper) {
+        this._swipeHelper.dispose();
+      }
 
-      this._items             = null
-      this._config            = null
-      this._element           = null
-      this._interval          = null
-      this._isPaused          = null
-      this._isSliding         = null
-      this._activeElement     = null
-      this._indicatorsElement = null
-    }
+      super.dispose();
+    } // Private
 
 
-    // private
-
-    _getConfig(config) {
-      config = $.extend({}, Default, config)
-      Util.typeCheckConfig(NAME, config, DefaultType)
-      return config
+    _configAfterMerge(config) {
+      config.defaultInterval = config.interval;
+      return config;
     }
 
     _addEventListeners() {
       if (this._config.keyboard) {
-        $(this._element)
-          .on(Event.KEYDOWN, (event) => this._keydown(event))
+        EventHandler__default.default.on(this._element, EVENT_KEYDOWN, event => this._keydown(event));
       }
 
-      if (this._config.pause === 'hover' &&
-        !('ontouchstart' in document.documentElement)) {
-        $(this._element)
-          .on(Event.MOUSEENTER, (event) => this.pause(event))
-          .on(Event.MOUSELEAVE, (event) => this.cycle(event))
+      if (this._config.pause === 'hover') {
+        EventHandler__default.default.on(this._element, EVENT_MOUSEENTER, () => this.pause());
+        EventHandler__default.default.on(this._element, EVENT_MOUSELEAVE, () => this._maybeEnableCycle());
       }
+
+      if (this._config.touch && Swipe__default.default.isSupported()) {
+        this._addTouchEventListeners();
+      }
+    }
+
+    _addTouchEventListeners() {
+      for (const img of SelectorEngine__default.default.find(SELECTOR_ITEM_IMG, this._element)) {
+        EventHandler__default.default.on(img, EVENT_DRAG_START, event => event.preventDefault());
+      }
+
+      const endCallBack = () => {
+        if (this._config.pause !== 'hover') {
+          return;
+        } // If it's a touch-enabled device, mouseenter/leave are fired as
+        // part of the mouse compatibility events on first tap - the carousel
+        // would stop cycling until user tapped out of it;
+        // here, we listen for touchend, explicitly pause the carousel
+        // (as if it's the second time we tap on it, mouseenter compat event
+        // is NOT fired) and after a timeout (to allow for mouse compatibility
+        // events to fire) we explicitly restart cycling
+
+
+        this.pause();
+
+        if (this.touchTimeout) {
+          clearTimeout(this.touchTimeout);
+        }
+
+        this.touchTimeout = setTimeout(() => this._maybeEnableCycle(), TOUCHEVENT_COMPAT_WAIT + this._config.interval);
+      };
+
+      const swipeConfig = {
+        leftCallback: () => this._slide(this._directionToOrder(DIRECTION_LEFT)),
+        rightCallback: () => this._slide(this._directionToOrder(DIRECTION_RIGHT)),
+        endCallback: endCallBack
+      };
+      this._swipeHelper = new Swipe__default.default(this._element, swipeConfig);
     }
 
     _keydown(event) {
       if (/input|textarea/i.test(event.target.tagName)) {
-        return
+        return;
       }
 
-      switch (event.which) {
-        case ARROW_LEFT_KEYCODE:
-          event.preventDefault()
-          this.prev()
-          break
-        case ARROW_RIGHT_KEYCODE:
-          event.preventDefault()
-          this.next()
-          break
-        default:
-          return
+      const direction = KEY_TO_DIRECTION[event.key];
+
+      if (direction) {
+        event.preventDefault();
+
+        this._slide(this._directionToOrder(direction));
       }
     }
 
     _getItemIndex(element) {
-      this._items = $.makeArray($(element).parent().find(Selector.ITEM))
-      return this._items.indexOf(element)
+      return this._getItems().indexOf(element);
     }
 
-    _getItemByDirection(direction, activeElement) {
-      const isNextDirection = direction === Direction.NEXT
-      const isPrevDirection = direction === Direction.PREVIOUS
-      const activeIndex     = this._getItemIndex(activeElement)
-      const lastItemIndex   = this._items.length - 1
-      const isGoingToWrap   = isPrevDirection && activeIndex === 0 ||
-                              isNextDirection && activeIndex === lastItemIndex
-
-      if (isGoingToWrap && !this._config.wrap) {
-        return activeElement
+    _setActiveIndicatorElement(index) {
+      if (!this._indicatorsElement) {
+        return;
       }
 
-      const delta     = direction === Direction.PREVIOUS ? -1 : 1
-      const itemIndex = (activeIndex + delta) % this._items.length
+      const activeIndicator = SelectorEngine__default.default.findOne(SELECTOR_ACTIVE, this._indicatorsElement);
+      activeIndicator.classList.remove(CLASS_NAME_ACTIVE);
+      activeIndicator.removeAttribute('aria-current');
+      const newActiveIndicator = SelectorEngine__default.default.findOne(`[data-bs-slide-to="${index}"]`, this._indicatorsElement);
 
-      return itemIndex === -1 ?
-        this._items[this._items.length - 1] : this._items[itemIndex]
-    }
-
-
-    _triggerSlideEvent(relatedTarget, eventDirectionName) {
-      const slideEvent = $.Event(Event.SLIDE, {
-        relatedTarget,
-        direction: eventDirectionName
-      })
-
-      $(this._element).trigger(slideEvent)
-
-      return slideEvent
-    }
-
-    _setActiveIndicatorElement(element) {
-      if (this._indicatorsElement) {
-        $(this._indicatorsElement)
-          .find(Selector.ACTIVE)
-          .removeClass(ClassName.ACTIVE)
-
-        const nextIndicator = this._indicatorsElement.children[
-          this._getItemIndex(element)
-        ]
-
-        if (nextIndicator) {
-          $(nextIndicator).addClass(ClassName.ACTIVE)
-        }
+      if (newActiveIndicator) {
+        newActiveIndicator.classList.add(CLASS_NAME_ACTIVE);
+        newActiveIndicator.setAttribute('aria-current', 'true');
       }
     }
 
-    _slide(direction, element) {
-      const activeElement = $(this._element).find(Selector.ACTIVE_ITEM)[0]
-      const nextElement   = element || activeElement &&
-        this._getItemByDirection(direction, activeElement)
+    _updateInterval() {
+      const element = this._activeElement || this._getActive();
 
-      const isCycling = Boolean(this._interval)
-
-      let directionalClassName
-      let orderClassName
-      let eventDirectionName
-
-      if (direction === Direction.NEXT) {
-        directionalClassName = ClassName.LEFT
-        orderClassName = ClassName.NEXT
-        eventDirectionName = Direction.LEFT
-      } else {
-        directionalClassName = ClassName.RIGHT
-        orderClassName = ClassName.PREV
-        eventDirectionName = Direction.RIGHT
+      if (!element) {
+        return;
       }
 
-      if (nextElement && $(nextElement).hasClass(ClassName.ACTIVE)) {
-        this._isSliding = false
-        return
+      const elementInterval = Number.parseInt(element.getAttribute('data-bs-interval'), 10);
+      this._config.interval = elementInterval || this._config.defaultInterval;
+    }
+
+    _slide(order, element = null) {
+      if (this._isSliding) {
+        return;
       }
 
-      const slideEvent = this._triggerSlideEvent(nextElement, eventDirectionName)
-      if (slideEvent.isDefaultPrevented()) {
-        return
+      const activeElement = this._getActive();
+
+      const isNext = order === ORDER_NEXT;
+      const nextElement = element || index.getNextActiveElement(this._getItems(), activeElement, isNext, this._config.wrap);
+
+      if (nextElement === activeElement) {
+        return;
+      }
+
+      const nextElementIndex = this._getItemIndex(nextElement);
+
+      const triggerEvent = eventName => {
+        return EventHandler__default.default.trigger(this._element, eventName, {
+          relatedTarget: nextElement,
+          direction: this._orderToDirection(order),
+          from: this._getItemIndex(activeElement),
+          to: nextElementIndex
+        });
+      };
+
+      const slideEvent = triggerEvent(EVENT_SLIDE);
+
+      if (slideEvent.defaultPrevented) {
+        return;
       }
 
       if (!activeElement || !nextElement) {
-        // some weirdness is happening, so we bail
-        return
+        // Some weirdness is happening, so we bail
+        // todo: change tests that use empty divs to avoid this check
+        return;
       }
 
-      this._isSliding = true
+      const isCycling = Boolean(this._interval);
+      this.pause();
+      this._isSliding = true;
+
+      this._setActiveIndicatorElement(nextElementIndex);
+
+      this._activeElement = nextElement;
+      const directionalClassName = isNext ? CLASS_NAME_START : CLASS_NAME_END;
+      const orderClassName = isNext ? CLASS_NAME_NEXT : CLASS_NAME_PREV;
+      nextElement.classList.add(orderClassName);
+      index.reflow(nextElement);
+      activeElement.classList.add(directionalClassName);
+      nextElement.classList.add(directionalClassName);
+
+      const completeCallBack = () => {
+        nextElement.classList.remove(directionalClassName, orderClassName);
+        nextElement.classList.add(CLASS_NAME_ACTIVE);
+        activeElement.classList.remove(CLASS_NAME_ACTIVE, orderClassName, directionalClassName);
+        this._isSliding = false;
+        triggerEvent(EVENT_SLID);
+      };
+
+      this._queueCallback(completeCallBack, activeElement, this._isAnimated());
 
       if (isCycling) {
-        this.pause()
-      }
-
-      this._setActiveIndicatorElement(nextElement)
-
-      const slidEvent = $.Event(Event.SLID, {
-        relatedTarget: nextElement,
-        direction: eventDirectionName
-      })
-
-      if (Util.supportsTransitionEnd() &&
-        $(this._element).hasClass(ClassName.SLIDE)) {
-
-        $(nextElement).addClass(orderClassName)
-
-        Util.reflow(nextElement)
-
-        $(activeElement).addClass(directionalClassName)
-        $(nextElement).addClass(directionalClassName)
-
-        $(activeElement)
-          .one(Util.TRANSITION_END, () => {
-            $(nextElement)
-              .removeClass(`${directionalClassName} ${orderClassName}`)
-              .addClass(ClassName.ACTIVE)
-
-            $(activeElement).removeClass(`${ClassName.ACTIVE} ${orderClassName} ${directionalClassName}`)
-
-            this._isSliding = false
-
-            setTimeout(() => $(this._element).trigger(slidEvent), 0)
-
-          })
-          .emulateTransitionEnd(TRANSITION_DURATION)
-
-      } else {
-        $(activeElement).removeClass(ClassName.ACTIVE)
-        $(nextElement).addClass(ClassName.ACTIVE)
-
-        this._isSliding = false
-        $(this._element).trigger(slidEvent)
-      }
-
-      if (isCycling) {
-        this.cycle()
+        this.cycle();
       }
     }
 
+    _isAnimated() {
+      return this._element.classList.contains(CLASS_NAME_SLIDE);
+    }
 
-    // static
+    _getActive() {
+      return SelectorEngine__default.default.findOne(SELECTOR_ACTIVE_ITEM, this._element);
+    }
 
-    static _jQueryInterface(config) {
+    _getItems() {
+      return SelectorEngine__default.default.find(SELECTOR_ITEM, this._element);
+    }
+
+    _clearInterval() {
+      if (this._interval) {
+        clearInterval(this._interval);
+        this._interval = null;
+      }
+    }
+
+    _directionToOrder(direction) {
+      if (index.isRTL()) {
+        return direction === DIRECTION_LEFT ? ORDER_PREV : ORDER_NEXT;
+      }
+
+      return direction === DIRECTION_LEFT ? ORDER_NEXT : ORDER_PREV;
+    }
+
+    _orderToDirection(order) {
+      if (index.isRTL()) {
+        return order === ORDER_PREV ? DIRECTION_LEFT : DIRECTION_RIGHT;
+      }
+
+      return order === ORDER_PREV ? DIRECTION_RIGHT : DIRECTION_LEFT;
+    } // Static
+
+
+    static jQueryInterface(config) {
       return this.each(function () {
-        let data      = $(this).data(DATA_KEY)
-        const _config = $.extend({}, Default, $(this).data())
-
-        if (typeof config === 'object') {
-          $.extend(_config, config)
-        }
-
-        const action = typeof config === 'string' ? config : _config.slide
-
-        if (!data) {
-          data = new Carousel(this, _config)
-          $(this).data(DATA_KEY, data)
-        }
+        const data = Carousel.getOrCreateInstance(this, config);
 
         if (typeof config === 'number') {
-          data.to(config)
-        } else if (typeof action === 'string') {
-          if (data[action] === undefined) {
-            throw new Error(`No method named "${action}"`)
-          }
-          data[action]()
-        } else if (_config.interval) {
-          data.pause()
-          data.cycle()
+          data.to(config);
+          return;
         }
-      })
-    }
 
-    static _dataApiClickHandler(event) {
-      const selector = Util.getSelectorFromElement(this)
+        if (typeof config === 'string') {
+          if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
+            throw new TypeError(`No method named "${config}"`);
+          }
 
-      if (!selector) {
-        return
-      }
-
-      const target = $(selector)[0]
-
-      if (!target || !$(target).hasClass(ClassName.CAROUSEL)) {
-        return
-      }
-
-      const config     = $.extend({}, $(target).data(), $(this).data())
-      const slideIndex = this.getAttribute('data-slide-to')
-
-      if (slideIndex) {
-        config.interval = false
-      }
-
-      Carousel._jQueryInterface.call($(target), config)
-
-      if (slideIndex) {
-        $(target).data(DATA_KEY).to(slideIndex)
-      }
-
-      event.preventDefault()
+          data[config]();
+        }
+      });
     }
 
   }
-
-
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
-  $(document)
-    .on(Event.CLICK_DATA_API, Selector.DATA_SLIDE, Carousel._dataApiClickHandler)
 
-  $(window).on(Event.LOAD_DATA_API, () => {
-    $(Selector.DATA_RIDE).each(function () {
-      const $carousel = $(this)
-      Carousel._jQueryInterface.call($carousel, $carousel.data())
-    })
-  })
+  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, function (event) {
+    const target = index.getElementFromSelector(this);
 
+    if (!target || !target.classList.contains(CLASS_NAME_CAROUSEL)) {
+      return;
+    }
 
+    event.preventDefault();
+    const carousel = Carousel.getOrCreateInstance(target);
+    const slideIndex = this.getAttribute('data-bs-slide-to');
+
+    if (slideIndex) {
+      carousel.to(slideIndex);
+
+      carousel._maybeEnableCycle();
+
+      return;
+    }
+
+    if (Manipulator__default.default.getDataAttribute(this, 'slide') === 'next') {
+      carousel.next();
+
+      carousel._maybeEnableCycle();
+
+      return;
+    }
+
+    carousel.prev();
+
+    carousel._maybeEnableCycle();
+  });
+  EventHandler__default.default.on(window, EVENT_LOAD_DATA_API, () => {
+    const carousels = SelectorEngine__default.default.find(SELECTOR_DATA_RIDE);
+
+    for (const carousel of carousels) {
+      Carousel.getOrCreateInstance(carousel);
+    }
+  });
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Carousel._jQueryInterface
-  $.fn[NAME].Constructor = Carousel
-  $.fn[NAME].noConflict  = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT
-    return Carousel._jQueryInterface
-  }
+  index.defineJQueryPlugin(Carousel);
 
-  return Carousel
+  return Carousel;
 
-})(jQuery)
-
-export default Carousel
+}));
+//# sourceMappingURL=carousel.js.map

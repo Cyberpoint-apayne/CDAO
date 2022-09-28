@@ -1,193 +1,100 @@
-import Util from './util'
+/*!
+  * Bootstrap alert.js v5.2.1 (https://getbootstrap.com/)
+  * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+  */
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('./util/index'), require('./dom/event-handler'), require('./base-component'), require('./util/component-functions')) :
+  typeof define === 'function' && define.amd ? define(['./util/index', './dom/event-handler', './base-component', './util/component-functions'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Alert = factory(global.Index, global.EventHandler, global.BaseComponent, global.ComponentFunctions));
+})(this, (function (index, EventHandler, BaseComponent, componentFunctions) { 'use strict';
 
+  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.6): alert.js
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * --------------------------------------------------------------------------
- */
-
-const Alert = (($) => {
-
+  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
   /**
-   * ------------------------------------------------------------------------
+   * --------------------------------------------------------------------------
+   * Bootstrap (v5.2.1): alert.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+   * --------------------------------------------------------------------------
+   */
+  /**
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  const NAME                = 'alert'
-  const VERSION             = '4.0.0-alpha.6'
-  const DATA_KEY            = 'bs.alert'
-  const EVENT_KEY           = `.${DATA_KEY}`
-  const DATA_API_KEY        = '.data-api'
-  const JQUERY_NO_CONFLICT  = $.fn[NAME]
-  const TRANSITION_DURATION = 150
-
-  const Selector = {
-    DISMISS : '[data-dismiss="alert"]'
-  }
-
-  const Event = {
-    CLOSE          : `close${EVENT_KEY}`,
-    CLOSED         : `closed${EVENT_KEY}`,
-    CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`
-  }
-
-  const ClassName = {
-    ALERT : 'alert',
-    FADE  : 'fade',
-    SHOW  : 'show'
-  }
-
-
+  const NAME = 'alert';
+  const DATA_KEY = 'bs.alert';
+  const EVENT_KEY = `.${DATA_KEY}`;
+  const EVENT_CLOSE = `close${EVENT_KEY}`;
+  const EVENT_CLOSED = `closed${EVENT_KEY}`;
+  const CLASS_NAME_FADE = 'fade';
+  const CLASS_NAME_SHOW = 'show';
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
-  class Alert {
-
-    constructor(element) {
-      this._element = element
-    }
-
-
-    // getters
-
-    static get VERSION() {
-      return VERSION
-    }
+  class Alert extends BaseComponent__default.default {
+    // Getters
+    static get NAME() {
+      return NAME;
+    } // Public
 
 
-    // public
+    close() {
+      const closeEvent = EventHandler__default.default.trigger(this._element, EVENT_CLOSE);
 
-    close(element) {
-      element = element || this._element
-
-      const rootElement = this._getRootElement(element)
-      const customEvent = this._triggerCloseEvent(rootElement)
-
-      if (customEvent.isDefaultPrevented()) {
-        return
+      if (closeEvent.defaultPrevented) {
+        return;
       }
 
-      this._removeElement(rootElement)
-    }
+      this._element.classList.remove(CLASS_NAME_SHOW);
 
-    dispose() {
-      $.removeData(this._element, DATA_KEY)
-      this._element = null
-    }
+      const isAnimated = this._element.classList.contains(CLASS_NAME_FADE);
 
-
-    // private
-
-    _getRootElement(element) {
-      const selector = Util.getSelectorFromElement(element)
-      let parent     = false
-
-      if (selector) {
-        parent = $(selector)[0]
-      }
-
-      if (!parent) {
-        parent = $(element).closest(`.${ClassName.ALERT}`)[0]
-      }
-
-      return parent
-    }
-
-    _triggerCloseEvent(element) {
-      const closeEvent = $.Event(Event.CLOSE)
-
-      $(element).trigger(closeEvent)
-      return closeEvent
-    }
-
-    _removeElement(element) {
-      $(element).removeClass(ClassName.SHOW)
-
-      if (!Util.supportsTransitionEnd() ||
-          !$(element).hasClass(ClassName.FADE)) {
-        this._destroyElement(element)
-        return
-      }
-
-      $(element)
-        .one(Util.TRANSITION_END, (event) => this._destroyElement(element, event))
-        .emulateTransitionEnd(TRANSITION_DURATION)
-    }
-
-    _destroyElement(element) {
-      $(element)
-        .detach()
-        .trigger(Event.CLOSED)
-        .remove()
-    }
+      this._queueCallback(() => this._destroyElement(), this._element, isAnimated);
+    } // Private
 
 
-    // static
+    _destroyElement() {
+      this._element.remove();
 
-    static _jQueryInterface(config) {
+      EventHandler__default.default.trigger(this._element, EVENT_CLOSED);
+      this.dispose();
+    } // Static
+
+
+    static jQueryInterface(config) {
       return this.each(function () {
-        const $element = $(this)
-        let data       = $element.data(DATA_KEY)
+        const data = Alert.getOrCreateInstance(this);
 
-        if (!data) {
-          data = new Alert(this)
-          $element.data(DATA_KEY, data)
+        if (typeof config !== 'string') {
+          return;
         }
 
-        if (config === 'close') {
-          data[config](this)
-        }
-      })
-    }
-
-    static _handleDismiss(alertInstance) {
-      return function (event) {
-        if (event) {
-          event.preventDefault()
+        if (data[config] === undefined || config.startsWith('_') || config === 'constructor') {
+          throw new TypeError(`No method named "${config}"`);
         }
 
-        alertInstance.close(this)
-      }
+        data[config](this);
+      });
     }
 
   }
-
-
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
-  $(document).on(
-    Event.CLICK_DATA_API,
-    Selector.DISMISS,
-    Alert._handleDismiss(new Alert())
-  )
 
-
+  componentFunctions.enableDismissTrigger(Alert, 'close');
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Alert._jQueryInterface
-  $.fn[NAME].Constructor = Alert
-  $.fn[NAME].noConflict  = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT
-    return Alert._jQueryInterface
-  }
+  index.defineJQueryPlugin(Alert);
 
-  return Alert
+  return Alert;
 
-})(jQuery)
-
-export default Alert
+}));
+//# sourceMappingURL=alert.js.map

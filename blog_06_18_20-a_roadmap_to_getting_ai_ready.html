@@ -1,270 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@DoDJAIC" />
-	<meta name="twitter:title" content="AI in Defense - DoD's AI Blog" />
-	<meta name="twitter:description" content="Department of Defense's Artificial Intelligence Blog" />
-	<meta name="twitter:image" content="https://www.ai.mil/img/blogimg_06_18_20a.png" /><title>A Roadmap to Getting “AI-Ready”</title>
-	<meta name="twitter:image:alt" content="AI in Defense" /><title>Blog - 06_18_20 - A Roadmap to Getting “AI-Ready”</title>
-	<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
-	<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOD" id="_fed_an_ua_tag"></script>
-    <!-- Flavicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<!-- Font Icons -->
-    <link media="all" rel="stylesheet" href="css/fonts/icomoon/icomoon.css">
-    <link media="all" rel="stylesheet" href="css/fonts/roxine-font-icon/roxine-font.css">
-    <link media="all" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.css">
-    <!-- Vendors -->
-    <link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.carousel.min.css">
-    <link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.theme.default.min.css">
-    <link media="all" rel="stylesheet" href="vendors/animate/animate.css">
-    <link media="all" rel="stylesheet" href="vendors/rateyo/jquery.rateyo.css">
-    <link media="all" rel="stylesheet" href="vendors/bootstrap-datepicker/css/bootstrap-datepicker.css">
-    <link media="all" rel="stylesheet" href="vendors/fancyBox/source/jquery.fancybox.css">
-    <link media="all" rel="stylesheet" href="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
-    <!-- Bootstrap 4 -->
-    <link media="all" rel="stylesheet" href="css/bootstrap.css">
-    <!-- Rev Slider -->
-    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/settings.css">
-    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/navigation.css">
-    <!-- Theme CSS -->
-    <link media="all" rel="stylesheet" href="css/main.css">
-    <!-- Custom CSS -->
-    <link media="all" rel="stylesheet" href="css/custom.css">
-	<script src="https://www.ai.mil/js/jquery-3.6.0.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@DoDJAIC" />
+<meta name="twitter:title" content="AI in Defense - DoD's AI Blog" />
+<meta name="twitter:description" content="Department of Defense's Artificial Intelligence Blog" />
+<meta name="twitter:image" content="https://www.ai.mil/img/blogimg_06_18_20a.png" />
+<title>A Roadmap to Getting “AI-Ready”</title>
+<meta name="twitter:image:alt" content="AI in Defense" />
+<title>Blog - 06_18_20 - A Roadmap to Getting “AI-Ready”</title>
+<!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. --> 
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOD" id="_fed_an_ua_tag"></script> 
+<!-- Flavicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<!-- Font Icons -->
+<link media="all" rel="stylesheet" href="css/fonts/icomoon/icomoon.css">
+<link media="all" rel="stylesheet" href="css/fonts/roxine-font-icon/roxine-font.css">
+<link media="all" rel="stylesheet" href="vendors/font-awesome/css/font-awesome.css">
+<!-- Vendors -->
+<link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.carousel.min.css">
+<link media="all" rel="stylesheet" href="vendors/owl-carousel/dist/assets/owl.theme.default.min.css">
+<link media="all" rel="stylesheet" href="vendors/animate/animate.css">
+
+<link media="all" rel="stylesheet" href="vendors/bootstrap-datepicker/css/bootstrap-datepicker.css">
+<link media="all" rel="stylesheet" href="vendors/fancyBox/source/jquery.fancybox.css">
+<link media="all" rel="stylesheet" href="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
+<!-- Bootstrap 4 -->
+<link media="all" rel="stylesheet" href="css/bootstrap.css">
+<!-- Rev Slider -->
+<link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/settings.css">
+<link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/layers.css">
+<link rel="stylesheet" type="text/css" href="vendors/rev-slider/revolution/css/navigation.css">
+<!-- Theme CSS -->
+<link media="all" rel="stylesheet" href="css/main.css">
+<!-- Custom CSS -->
+<link media="all" rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
-    <!-- main wrapper -->
-    <div id="wrapper">
-        <div class="page-wrapper">
-            <!-- header of the page -->
-		<div id="nav-placeholder">
-
+<!-- main wrapper -->
+<div id="wrapper">
+	<div class="page-wrapper"> 
+		<!-- header of the page --><div id="nav-placeholder"> 
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+	<div class="container-fluid"> <a class="navbar-brand"  href="cdao.html"> <img src="img/cdao_logo.png" alt="jaic"></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item"> <a class="nav-link active" aria-current="page" href="cdao.html" rel="noopener noreferrer" data-title="Home">HOME</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="news_media.html" rel="noopener noreferrer" data-title="News/Media">NEWS/MEDIA</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="references.html" rel="noopener noreferrer" data-title="References">REFERENCES</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="blog.html" rel="noopener noreferrer" data-title="Blog">BLOG</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="careers.html" rel="noopener noreferrer" data-title="Careers">CAREERS</a> </li>
+			</ul>
+			<span class="dropdown" data-animation="fadeIn" style="color: #E07000"> <a class="btn btn-primary has-radius-small" href="digai2022.html" rel="noopener noreferrer" data-title="2022 DoD Digital and Artificial Intelligence Symposium"> DoD Digital &amp; AI Symposium </a> </span> 
 		</div>
-
-		<script>
-		$(function(){
-		  $("#nav-placeholder").load("header.html");
-		});
-		</script>
-            <!--/header of the page -->
-            <main>
-               <!-- visual/banner of the page -->
-                <section class="visual">
-                    <div class="visual-inner blog-banner black-overlay-0 parallax" data-stellar-background-ratio="0.55" style="height: 300px;">
-                    </div>
-                </section>
-                <!--/visual/banner of the page -->
-				<!-- main content wrapper -->
-                <div class="content-wrapper">
-                    <section class="content-block">
-                        <div class="container">
-                            <div class="row mt-5">
-                                <div class="col-lg-12 less-wide">
-                                    <div class="blog-holder">
-                                        <article class="blog-article">
-                                                <div class="blog-title text-center pb-5">
-                                                  <h1>A Roadmap to Getting <br>“AI-Ready”</h1>
-                                                  <div class="blog-lists border-0">
-														  <ul class="blog-list-items">
-                                                            <li>By: The JAIC</li>
-                                                            <li><time datetime="2020-06-18">18 <span>JUN 2020</span> </time></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            <div class="blog-desc pt-5">
-                                                <div class="blog-img">
-                                                    <div class="image-wrap">
-                                                        <figure class="">
-                                                          <img src="img/blogimg_06_18_20a.png" alt="Source: DVIDS"><em>(Source: DVIDS)</em>
-														</figure>
-														
-                                                    </div>
-												</div>
-                                                <div class="blockquote-block">
-                                                  <p>Having access to the right data when it is needed will significantly ease and speed the development of future Department of Defense artificial intelligence capabilities. Unfortunately, much of the data that could be used for AI development in the DoD is not collected or stored effectively for optimal use. For this reason, data scientists and AI practitioners from the Joint Artificial Intelligence Center are encouraging DoD components to begin thinking about how to make their systems and procedures “AI-Ready.” </p>
-                                                  <div class="col-xl-5" style="border-radius: 25px; float: right"><img src="img/blogimg_06_18_20b.png" alt="Moving AI Theory to Practice image"><em>(Source: DVIDS)</em></div><p>“When someone comes and asks us to build an impactful AI application to help them make better decisions on the battlefield, we don’t want to have to respond with, ‘Well, we’d love to help you, but you don’t have any data. So, we’ll have to start from scratch,’” said Colonel Bradley Boyd, lead for the JAIC’s Joint Warfighting Operations Mission Initiative. “We are tasked with delivering AI capabilities. However, for my team to do that, the force has to meet us part of the way by getting themselves AI-Ready.” </p>
-                                                  <p>What does “AI-Ready” mean? It means taking steps to collect data around relevant systems, equipment, and procedures; and storing and curating that data in a way that makes it easily accessible to others for use in future AI applications. </p>
-                                                 
-												  <p>Boyd and his team are creating an AI-Ready Framework that will act as a roadmap for DoD components as they begin thinking through the process of making systems and procedures AI-Ready. He points out that all data collection is valuable to AI development. </p>
-                                                  <p>“The presence of data will illuminate AI applications,” said Boyd. “What we’re asking DoD components to do is really make an investment in future applications. Once the data is collected and stored, we can then assess opportunities to create more AI capability.” </p>
-                                                  
-												  <h3>Getting Started</h3>
-                                                  <div class="col-xl-5" style="border-radius: 25px; float: right"><img src="img/blogimg_06_18_20d.png" alt="DVIDS"><em>(Source: DVIDS)</em></div><p>
-												  <p>There is no magic formula for becoming AI-Ready. However, the transition to AI ready systems will require the implementation of methodical and highly deliberative processes for collecting and curating data. These processes will vary in organizations depending on how they currently manage data. In some cases, </p>
-                                                  <p>DoD components that are collecting temporary data can begin to save this data permanently. In other cases, making the data AI-Ready is a matter of standardizing existing data and co-locating it with like data. Another key step when working with existing—and new—datastores is to carefully catalog it and promote it. That way, other DoD units and personnel know exactly what data is available and where. DoD components can also begin to make their critical hardware and equipment AI-Ready by adding data-collection sensors and data transmission capabilities. This equipment could include anything from rifles and Humvees to uniforms and helmets to water blivets and night-vision goggles. </p>
-                                                  <div class="col-xl-5" style="border-radius: 25px; float: left"><img src="img/blogimg_06_18_20c.png" alt="image_soldiers marching"><em>(Source: DVIDS)</em></div>
-												  <p>“Put a sensor in boots, for example, and you can measure the number of steps your warfighters are taking each day, or you could measure the heat inside the boot,” Boyd explains. “Even though you might not have a specific application in mind, those boots are now AI-Ready.” To that end, Boyd stresses that at some point in the future, unused data steams can be used to develop AI capabilities. </p>
-                                                  <p>“For example, perhaps someone wants to analyze troop movements or foot injuries,” Boyd explains. “But what it’s going to be used for isn’t important right now. All those boots need to do right now is be able to collect their data so it can be put in a central repository and made accessible downstream to that person who comes along and says: ‘I’m trying to solve a problem.’ And someone can say, ‘Well, you know what? There’s this boot database that’s been collecting that data.” </p>
-                                                  <p>Getting computer systems AI-Ready is a matter of practicing good system design. That includes affirmatively answering the following questions for any existing or new system: </p>
-                                                  <ul>
-                                                    <li>Does it utilize open architecture? </li>
-                                                    <li> Is there a clear understanding of how people can utilize the system outside of its original intended purpose? </li>
-                                                    <li> Is everything documented properly? </li>
-                                                    <li> Do you have an Application Programming Interface in place that allows other systems to interact with your system? </li>
-                                                  </ul>
-<h3>An Investment for the Future </h3>
-                                                  <p>Ultimately, the most important step in becoming AI-Ready is awareness and taking the time to be proactive right now. </p>
-                                                  <p>“We’re all going to have to take the long view on making our sytems and processes AI ready,” said Boyd. “For now, we’re going take what data is available already and make AI capabilities from that, but this is really an investment into future capabilities across the force. And if we can convince people just how important AI is to the force, I think they’ll be willing to make the investment. It won’t pay off right away—but it will pay off in that, downstream, we will be able to ramp up needed AI capabilities very quickly and very effectively.” </p>
-</p>
-                                                  <div class="blog-share mt-5">
-                                                    <ul class="social-network with-text">
-                                                        <li><strong>Share :</strong></li>
-                                                        <!--<li><a href="#"><span class="icon-facebook"></span> Facebook</a></li>-->
-                                                        <li><a href="https://twitter.com/DoDJAIC" target="_blank"><span class="icon-twitter"></span> Twitter</a></li>
-                                                        <li><a href="https://www.linkedin.com/company/dod-joint-artificial-intelligence-center/" target="_blank"><span class="icon-linkedin"></span> LinkedIn</a></li>
-                                                  </ul>
-                                                </div>
-                                            </div>
+	</div>
+</nav>
+</div><!--/header of the page -->
+		<main> 
+			<!-- visual/banner of the page -->
+			<section class="visual">
+				<div class="visual-inner blog-banner black-overlay-0 parallax" data-stellar-background-ratio="0.55" style="height: 300px;"> </div>
+			</section>
+			<!--/visual/banner of the page --> 
+			<!-- main content wrapper -->
+			<div class="content-wrapper">
+				<section class="content-block">
+					<div class="container">
+						<div class="row mt-5">
+							<div class="col-lg-12 less-wide">
+								<div class="blog-holder">
+									<article class="blog-article">
+										<div class="blog-title text-center pb-5">
+											<h1>A Roadmap to Getting <br>
+												“AI-Ready”</h1>
+											<div class="blog-lists border-0">
+												<ul class="blog-list-items">
+													<li>By: The JAIC</li>
+													<li>
+														<time datetime="2020-06-18">18 <span>JUN 2020</span> </time>
+													</li>
+												</ul>
 											</div>
-                                        </article>
-                                    </div>
-										
-                                   </div>
-                                </div>
-                            </div>
-                    </section>
-                    </div>
-                    <!--/main content wrapper -->
-            </main>
-            </div>
-            <!-- footer of the pagse -->
-        <footer class="footer footer-v1"> 
-			<div class="content-block footer-main pb-3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-2">
-                            <div class="footer-logo mt-2">
-                                <a href="index.html"><img src="img/jaic_logo.png" alt="jaic_logo"></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <!--<div class="waituk_newsletter-form newsletter-v1 mt-2">
-                                <form action="#" method="post">
-                                    <fieldset class="clearfix">
-                                        <div class="form-group input-holder">
-                                            <input type="email" class="form-control" placeholder="Email Address">
-                                            <button type="submit" class="btn"><i class="fa fa-send"></i></button>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                            <div class="my-4">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                            </div>-->
-                        </div>
-                        <div class="col-lg-2">
-                            <h4>JAIC</h4>
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About The JAIC</a></li>
-                                    <li><a href="disclaimer.html" target="_blank">Disclaimer</a></li>
-                                    <li><a href="https://dodcio.defense.gov/DoDSection508/Std_Stmt.aspx" target="_blank">Accessibility</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <h4>Policies</h4>
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="https://www.nlrb.gov/reports/regulatory-reports-and-notices/no-fear-act" target="_blank">No Fear Act</a></li>
-                                    <li><a href="privacy_policy.html">Privacy</a></li>
-                                    <li><a href="https://iase.disa.mil/Pages/index.aspx/" target="_blank">Cybersecurity</a></li>
-                                    <li><a href="https://www.foia.gov/" target="_blank">FOIA</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <h4>Links</h4>
-                            <div class="footer-nav">
-                                <ul>
-                                    <li><a href="https://www.defense.gov" target="_blank">Defense.gov</a></li>
-                                    <li><a href="https://www.usa.gov" target="_blank">USA.gov</a></li>
-                                    <!--<li><a href="/careers">Careers</a></li>-->
-                                    <!--<li><a href="/contact">Contact Us</a></li>-->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-				</div>
-			<div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 pb-3">
-                            <p>© 2019 JAIC - Joint Artificial Intelligence Center </p>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="social-network with-text">
-                                <!--<li><a href="#"><span class="icon-facebook"></span></a></li>-->
-                                <li><a href="https://twitter.com/DoDJAIC" target="_blank"><span class="icon-twitter"></span></a></li>
-                                <!--<li><a href="#"><span class="icon-instagram"></span></a></li>-->
-                                <li><a href="https://www.linkedin.com/company/dod-joint-artificial-intelligence-center/" target="_blank"><span class="icon-linkedin"></span></a></li>
-                            </ul>
-                        </div>
+										</div>
+										<div class="blog-desc pt-5">
+											<div class="blog-img">
+												<div class="image-wrap">
+													<figure class=""> <img src="img/blogimg_06_18_20a.png" alt="Source: DVIDS"><em>(Source: DVIDS)</em> </figure>
+												</div>
+											</div>
+											<div class="blockquote-block">
+												<p>Having access to the right data when it is needed will significantly ease and speed the development of future Department of Defense artificial intelligence capabilities. Unfortunately, much of the data that could be used for AI development in the DoD is not collected or stored effectively for optimal use. For this reason, data scientists and AI practitioners from the Joint Artificial Intelligence Center are encouraging DoD components to begin thinking about how to make their systems and procedures “AI-Ready.” </p>
+												<div class="col-xl-5" style="border-radius: 25px; float: right"><img src="img/blogimg_06_18_20b.png" alt="Moving AI Theory to Practice image"><em>(Source: DVIDS)</em></div>
+												<p>“When someone comes and asks us to build an impactful AI application to help them make better decisions on the battlefield, we don’t want to have to respond with, ‘Well, we’d love to help you, but you don’t have any data. So, we’ll have to start from scratch,’” said Colonel Bradley Boyd, lead for the JAIC’s Joint Warfighting Operations Mission Initiative. “We are tasked with delivering AI capabilities. However, for my team to do that, the force has to meet us part of the way by getting themselves AI-Ready.” </p>
+												<p>What does “AI-Ready” mean? It means taking steps to collect data around relevant systems, equipment, and procedures; and storing and curating that data in a way that makes it easily accessible to others for use in future AI applications. </p>
+												<p>Boyd and his team are creating an AI-Ready Framework that will act as a roadmap for DoD components as they begin thinking through the process of making systems and procedures AI-Ready. He points out that all data collection is valuable to AI development. </p>
+												<p>“The presence of data will illuminate AI applications,” said Boyd. “What we’re asking DoD components to do is really make an investment in future applications. Once the data is collected and stored, we can then assess opportunities to create more AI capability.” </p>
+												<h3>Getting Started</h3>
+												<div class="col-xl-5" style="border-radius: 25px; float: right"><img src="img/blogimg_06_18_20d.png" alt="DVIDS"><em>(Source: DVIDS)</em></div>
+												<p>
+												<p>There is no magic formula for becoming AI-Ready. However, the transition to AI ready systems will require the implementation of methodical and highly deliberative processes for collecting and curating data. These processes will vary in organizations depending on how they currently manage data. In some cases, </p>
+												<p>DoD components that are collecting temporary data can begin to save this data permanently. In other cases, making the data AI-Ready is a matter of standardizing existing data and co-locating it with like data. Another key step when working with existing—and new—datastores is to carefully catalog it and promote it. That way, other DoD units and personnel know exactly what data is available and where. DoD components can also begin to make their critical hardware and equipment AI-Ready by adding data-collection sensors and data transmission capabilities. This equipment could include anything from rifles and Humvees to uniforms and helmets to water blivets and night-vision goggles. </p>
+												<div class="col-xl-5" style="border-radius: 25px; float: left"><img src="img/blogimg_06_18_20c.png" alt="image_soldiers marching"><em>(Source: DVIDS)</em></div>
+												<p>“Put a sensor in boots, for example, and you can measure the number of steps your warfighters are taking each day, or you could measure the heat inside the boot,” Boyd explains. “Even though you might not have a specific application in mind, those boots are now AI-Ready.” To that end, Boyd stresses that at some point in the future, unused data steams can be used to develop AI capabilities. </p>
+												<p>“For example, perhaps someone wants to analyze troop movements or foot injuries,” Boyd explains. “But what it’s going to be used for isn’t important right now. All those boots need to do right now is be able to collect their data so it can be put in a central repository and made accessible downstream to that person who comes along and says: ‘I’m trying to solve a problem.’ And someone can say, ‘Well, you know what? There’s this boot database that’s been collecting that data.” </p>
+												<p>Getting computer systems AI-Ready is a matter of practicing good system design. That includes affirmatively answering the following questions for any existing or new system: </p>
+												<ul>
+													<li>Does it utilize open architecture? </li>
+													<li> Is there a clear understanding of how people can utilize the system outside of its original intended purpose? </li>
+													<li> Is everything documented properly? </li>
+													<li> Do you have an Application Programming Interface in place that allows other systems to interact with your system? </li>
+												</ul>
+												<h3>An Investment for the Future </h3>
+												<p>Ultimately, the most important step in becoming AI-Ready is awareness and taking the time to be proactive right now. </p>
+												<p>“We’re all going to have to take the long view on making our sytems and processes AI ready,” said Boyd. “For now, we’re going take what data is available already and make AI capabilities from that, but this is really an investment into future capabilities across the force. And if we can convince people just how important AI is to the force, I think they’ll be willing to make the investment. It won’t pay off right away—but it will pay off in that, downstream, we will be able to ramp up needed AI capabilities very quickly and very effectively.” </p>
+												</p>
+												<div class="blog-share mt-5">
+													<ul class="social-network with-text">
+														<li><strong>Share :</strong></li>
+														<!--<li><a href="#"><span class="icon-facebook"></span> Facebook</a></li>-->
+														<li><a href="https://twitter.com/DoDJAIC" target="_blank"><span class="icon-twitter"></span> Twitter</a></li>
+														<li><a href="https://www.linkedin.com/company/dod-joint-artificial-intelligence-center/" target="_blank"><span class="icon-linkedin"></span> LinkedIn</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!--/main content wrapper --> 
+		</main>
+	</div>
+	<!-- footer of the page -->
+	<footer class="footer footer-v1">
+		<div class="content-block footer-main pb-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2">
+						<div class="footer-logo mt-2"> <a href="https://www.ai.mil/cdao.html"><img src="img/cdao_logo_sm_colorwht.png" alt="CDAO logo"></a> </div>
+					</div>
+					<div class="col-lg-4"> </div>
+					<div class="col-lg-2">
+						<h4>CDAO</h4>
+						<div class="footer-nav">
+							<ul>
+								<li><a href="cdao.html">Home</a></li>
+								<li><a href="disclaimer.html">Disclaimer</a></li>
+								<li><a href="https://dodcio.defense.gov/DoDSection508/Std_Stmt.aspx">Accessibility</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<h4>Policies</h4>
+						<div class="footer-nav">
+							<ul>
+								<li><a href="https://www.nlrb.gov/reports/regulatory-reports-and-notices/no-fear-act" target="_blank">No Fear Act</a></li>
+								<li><a href="privacy_policy.html">Privacy</a></li>
+								<li><a href="https://public.cyber.mil" target="_blank">Cybersecurity</a></li>
+								<li><a href="https://www.foia.gov/" target="_blank">FOIA</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<h4>Links</h4>
+						<div class="footer-nav">
+							<ul>
+								<li><a href="https://www.defense.gov" target="_blank">Defense.gov</a></li>
+								<li><a href="https://www.usa.gov" target="_blank">USA.gov</a></li>
+								<!--<li><a href="careers.html">Careers</a></li>--> 
+								<!--<li><a href="/contact">Contact Us</a></li>-->
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-        </footer>
-            <!--/footer of the page -->
-        </div>
-        <!-- search form wrapper -->
-        <div class="search-form-wrapper">
-            <a href="#" class="nav-search-link close"><span class="icon-android-close"></span></a>
-            <div class="holder">
-                <input type="search" class="form-control form-control-v1" placeholder="Enter Your Search">
-                <button type="submit"><span class="custom-icon-search"></span></button>
-            </div>
-        </div>
-        <a href="#" class="section-scroll" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
-        <!-- jquery library -->
-        <script src="https://www.ai.mil/js/jquery-3.6.0.min.js"></script>
-        <!-- external scripts -->
-        <script src="vendors/tether/dist/js/tether.min.js"></script>
-        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-        <script src="vendors/stellar/jquery.stellar.min.js"></script>
-        <script src="vendors/isotope/javascripts/isotope.pkgd.min.js"></script>
-        <script src="vendors/isotope/javascripts/packery-mode.pkgd.js"></script>
-        <script src="vendors/owl-carousel/dist/owl.carousel.js"></script>
-        <script src="vendors/waypoint/waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-        <script src="vendors/fancyBox/source/jquery.fancybox.pack.js"></script>
-        <script src="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
-        <script src="vendors/image-stretcher-master/image-stretcher.js"></script>
-        <script src="vendors/wow/wow.min.js"></script>
-        <script src="vendors/rateyo/jquery.rateyo.js"></script>
-        <script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-        <script src="vendors/bootstrap-slider-master/src/js/bootstrap-slider.js"></script>
-        <script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-        <script src="js/mega-menu.js"></script>
-        <!-- custom jquery script -->
-        <script src="js/jquery.main.js"></script>
-        <!-- REVOLUTION JS FILES -->
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
-        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <!-- SNOW ADD ON -->
-        <script type="text/javascript" src="vendors/rev-slider/revolution-addons/snow/revolution.addon.snow.min.js"></script>
-        <!-- revolutions slider script -->
-        <script src="js/revolution.js"></script>
-
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 pb-3">
+							<p>© 2022 CDAO -  Chief Digital and Artificial Intelligence Office </p>
+						</div>
+						<div class="col-md-6">
+							<ul class="social-network with-text">
+								<!--<li><a href="#"><span class="icon-facebook"></span></a></li>-->
+								<li><a href="https://twitter.com/DODCDAO" target="_blank"><span class="icon-twitter"></span></a></li>
+								<!--<li><a href="#"><span class="icon-instagram"></span></a></li>-->
+								<li><a href="https://www.linkedin.com/company/dod-chief-digital-and-artificial-intelligence-office/" target="_blank"><span class="icon-linkedin"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--/footer of the page --> 
+</div>
+<!-- search form wrapper -->
+<div class="search-form-wrapper"> <a href="#" class="nav-search-link close"><span class="icon-android-close"></span></a>
+	<div class="holder">
+		<input type="search" class="form-control form-control-v1" placeholder="Enter Your Search">
+		<button type="submit"><span class="custom-icon-search"></span></button>
+	</div>
+</div>
+<a href="#" class="section-scroll" id="scroll-to-top"><i class="fa fa-angle-up"></i></a> 
+<!-- jquery library --> 
+<script src="js/jquery-3.6.1.min.js"></script> 
+<!-- external scripts --> 
+<script src="vendors/tether/dist/js/tether.min.js"></script> 
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script> 
+<script src="vendors/stellar/jquery.stellar.min.js"></script> 
+<script src="vendors/isotope/javascripts/isotope.pkgd.min.js"></script> 
+<script src="vendors/isotope/javascripts/packery-mode.pkgd.js"></script> 
+<script src="vendors/owl-carousel/dist/owl.carousel.js"></script> 
+<script src="vendors/waypoint/waypoints.min.js"></script> 
+<script src="vendors/counter-up/jquery.counterup.min.js"></script> 
+<script src="vendors/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<script src="vendors/fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script> 
+<script src="vendors/image-stretcher-master/image-stretcher.js"></script> 
+<script src="vendors/wow/wow.min.js"></script> 
+<script src="vendors/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script src="vendors/bootstrap-slider-master/src/js/bootstrap-slider.js"></script> 
+<script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script> 
+<script src="js/mega-menu.js"></script> 
+<!-- custom jquery script --> 
+<script src="js/jquery.main.js"></script> 
+<!-- REVOLUTION JS FILES --> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/jquery.themepunch.revolution.min.js"></script> 
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) --> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script> 
+<script type="text/javascript" src="vendors/rev-slider/revolution/js/extensions/revolution.extension.video.min.js"></script> 
+<!-- SNOW ADD ON --> 
+<script type="text/javascript" src="vendors/rev-slider/revolution-addons/snow/revolution.addon.snow.min.js"></script> 
+<!-- revolutions slider script --> 
+<script src="js/revolution.js"></script>
+</body>
 </html>
