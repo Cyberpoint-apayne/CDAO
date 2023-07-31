@@ -15,6 +15,7 @@ website:   	http://www.themepunch.com
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: Arial, "Arial Black", "Arial Bold", "Arial Bold Italic", "Arial Italic", "Arial Narrow", "Arial Narrow Bold", "Arial Narrow Bold Italic", "Arial Narrow Italic", "Arial Rounded MT Bold", "Arial Unicode MS";
 }
 
 .tp-caption.Twitter-Content a,.tp-caption.Twitter-Content a:visited

@@ -858,7 +858,7 @@ a:hover,a:focus {
 
 body {
 	font-weight: 400;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	letter-spacing: .0625rem;
 	color: #55565b;
 	font-size: 1rem;
@@ -867,7 +867,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
 	margin: 0 0 .9375rem;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #55565b;
 	line-height: 1.1;
 }
@@ -886,10 +886,10 @@ h2 {
 }
 
 h3 {
-	font-size: 1.125rem;
-	line-height: 1.2;
-	/*font-weight: 700;*/
-	color: #fa8b1d
+    font-size: 1.125rem;
+    line-height: 1.2;
+    /*font-weight: 700;*/
+    color: #2B73E5
 }
 
 h4 {
@@ -3699,7 +3699,7 @@ em.state-invalid {
 
 .main-header p {
 	font-weight: 500;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: .75rem;
 	line-height: 2.1;
 	letter-spacing: .0625rem;
@@ -3879,14 +3879,14 @@ em.state-invalid {
 	padding: .3rem 0 0;
 	font-size: .9rem;
 	color: #7d7d7d;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 700;
 }
 
 .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu h4 {
 	color: #7d7d7d;
 	font-size: .75rem;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	text-transform: capitalize;
 	font-weight: 700;
 	line-height: .5;
@@ -3896,7 +3896,7 @@ em.state-invalid {
 .mega-menus .mega-menu-multiple .cart-list .dropdown-menu-container > .dropdown-menu h6 {
 	color: #7d7d7d;
 	font-size: .75rem;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	text-transform: capitalize;
 	font-weight: 500;
 	line-height: 1;
@@ -4064,7 +4064,7 @@ em.state-invalid {
 	max-width: 51.43rem;
 	font-size: 1.143rem;
 	color: #fff;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400;
 }
 
@@ -4089,7 +4089,7 @@ em.state-invalid {
 .visual-title {
 	font-size: 1.875rem;
 	line-height: 1.2;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #fff;
 	display: block;
 	font-weight: 300;
@@ -4132,7 +4132,7 @@ em.state-invalid {
 
 .visual-text-v2 .visual-title {
 	font-weight: 700;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .visual-text-v3 {
@@ -4153,7 +4153,7 @@ em.state-invalid {
 	font-size: 1.875rem;
 	line-height: 1.2;
 	font-weight: 300;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .visual-no-bg .visual-inner {
@@ -4238,7 +4238,7 @@ em.state-invalid {
 	outline: none;
 	font-weight: 500;
 	cursor: pointer;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	border-radius: 0;
 	-webkit-transition: all linear .3s;
 	-o-transition: all linear .3s;
@@ -4434,7 +4434,7 @@ em.state-invalid {
 .btn.btn-small-font {
 	font-size: .875rem;
 	font-weight: 700;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .btn.has-shadow {
@@ -4618,7 +4618,7 @@ em.state-invalid {
 .btn-alternate.btn.btn-small-font {
 	font-size: .875rem;
 	font-weight: 700;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .btn-alternate.btn.has-shadow {
@@ -4858,7 +4858,7 @@ em.state-invalid {
 	text-transform: uppercase;
 	font-weight: 400;
 	margin-bottom: .9375rem;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	letter-spacing: .1429rem;
 }
 
@@ -4871,7 +4871,7 @@ em.state-invalid {
 	margin-bottom: 2rem;
 	line-height: 1.2;
 	color: #575757;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .content-sub-title ns {
@@ -4879,7 +4879,7 @@ em.state-invalid {
 	margin-bottom: 2rem;
 	line-height: 1.2;
 	color: #575757;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .col-wrap {
 	margin-bottom: 2.5rem;
@@ -5122,7 +5122,7 @@ main.no-banner {
 	display: block;
 	margin-bottom: 1.5rem;
 	font-size: .875rem;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 600;
 	color: #55565b;
 }
@@ -5159,7 +5159,7 @@ main.no-banner {
 }
 
 .element-heading {
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 }
 
@@ -5183,7 +5183,7 @@ main.no-banner {
 	line-height: 1rem;
 	text-transform: uppercase;
 	letter-spacing: 0;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	z-index: 999;
 	font-size: 1.5rem;
@@ -5263,7 +5263,7 @@ pre {
 	font-size: .875rem;
 	line-height: 1.2;
 	font-weight: 500;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #55565b;
 }
 
@@ -5445,7 +5445,7 @@ pre {
 	text-transform: uppercase;
 	color: #212121;
 	font-size: .875rem;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .ico-box .link-holder .link-more:hover {
@@ -5723,7 +5723,7 @@ pre {
 	background-image: url('../img/robot_handshake_1.jpg');
 }
 .cdao-banner {
-	background-image: url('../img/banner_cdao_temp.png');
+    background-image: url(../img/banner_cdao_temp.png);
 }
 .partnerships-banner {
 	background-image: url('../img/robot_handshake_1.jpg');
@@ -5850,7 +5850,7 @@ pre {
 	border: none;
 	outline: none;
 	cursor: pointer;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	color: #55565b;
 }
@@ -6650,7 +6650,7 @@ pre {
 
 .form-control {
 	border: .1429rem solid #f1f1f1;
-	font: 1.125rem/2rem 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: 1.125rem/2rem  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding: 0 .9375rem;
 	background: none;
 	letter-spacing: .2429rem;
@@ -7216,7 +7216,7 @@ a.full-width-icon:hover .social-text {
 
 .caption-hover-full .content-title {
 	text-transform: capitalize;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	color: #6e6f75;
 	position: relative;
@@ -7322,7 +7322,7 @@ a.full-width-icon:hover .social-text {
 }
 
 .waituk_contact-form .form-control {
-	font: .875rem/1 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: .875rem/1  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	letter-spacing: 0;
 	font-weight: 500;
 }
@@ -7354,7 +7354,7 @@ a.full-width-icon:hover .social-text {
 /******* contact info styles *******/
 
 .contact-title {
-	font: 700 .8571rem/2.1 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: 700 .8571rem/2.1  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin-bottom: 2.8125rem;
 }
 
@@ -7803,7 +7803,7 @@ a.full-width-icon:hover .social-text {
 }
 
 .accordion-container .card .card-header h5 {
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .accordion-container .card .card-header h5 a {
@@ -7910,7 +7910,7 @@ a.full-width-icon:hover .social-text {
 }
 
 .accordion-container.accordion-secondary .card .card-header h5 {
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .accordion-container.accordion-secondary .card .card-header h4 a {
@@ -8003,7 +8003,7 @@ a.full-width-icon:hover .social-text {
 
 .pricing-block h4 {
 	color: #55565b;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	text-transform: capitalize;
 }
@@ -8012,7 +8012,7 @@ a.full-width-icon:hover .social-text {
 	font-size: 1.25rem;
 	line-height: 1.2;
 	letter-spacing: .2143rem;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .pricing-block .content-sub-title {
@@ -8059,7 +8059,7 @@ a.full-width-icon:hover .social-text {
 	font-size: 1.25rem;
 	line-height: 1.2;
 	letter-spacing: .2143rem;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	margin: 1.563rem 0;
 }
 
@@ -8599,7 +8599,7 @@ a.full-width-icon:hover .social-text {
 /******* badge styles *******/
 
 .label-block .custom-badge {
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .label-block .custom-badge.badge {
@@ -8999,7 +8999,7 @@ a.full-width-icon:hover .social-text {
 .select-picker-block .btn {
 	width: 100%;
 	border: .1429rem solid #c1c5cd;
-	font: 1.125rem/2rem 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font: 1.125rem/2rem  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding: 0 .9375rem;
 	background: none;
 	letter-spacing: .2429rem;
@@ -9636,7 +9636,7 @@ a.full-width-icon:hover .social-text {
 .slider-title {
 	font-size: 1.875rem;
 	line-height: 1.2;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #fff;
 	display: block;
 	font-weight: 300;
@@ -9656,7 +9656,7 @@ a.full-width-icon:hover .social-text {
 	color: #575757;
 	font-size: 1.875rem;
 	line-height: 1.2;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 900;
 	text-transform: uppercase;
 	margin-bottom: 1.875rem;
@@ -9667,7 +9667,7 @@ a.full-width-icon:hover .social-text {
 	font-size: 1.125rem;
 	line-height: 1.2;
 	text-transform: uppercase;
-	font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 600;
 	letter-spacing: .3125rem;
 	margin-bottom: 1.25rem;
@@ -9902,7 +9902,7 @@ a.full-width-icon:hover .social-text {
 	font-size: .875rem;
 	line-height: 1.2;
 	font-weight: 500;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #55565b;
 }
 
@@ -9967,7 +9967,7 @@ a.full-width-icon:hover .social-text {
 	margin: 0;
 	font-size: .875rem;
 	font-weight: 500;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #212121;
 }
 
@@ -10021,7 +10021,7 @@ a.full-width-icon:hover .social-text {
 	margin: 0;
 	font-size: .875rem;
 	font-weight: 500;
-	font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #55565b;
 }
 
@@ -10773,8 +10773,8 @@ a.full-width-icon:hover .social-text {
 		
 	}
 	h9 {
-		font-size: 1.625rem;
-		
+    font-size: 1.625rem;
+    font-family: "Helvetica Neue", "Helvetica Neue Bold", "Helvetica Neue Bold Italic", "Helvetica Neue Condensed Black", "Helvetica Neue Condensed Bold", "Helvetica Neue Italic", "Helvetica Neue Light", "Helvetica Neue Light Italic", "Helvetica Neue Medium", "Helvetica Neue Medium Italic", "Helvetica Neue Thin", "Helvetica Neue Thin Italic", "Helvetica Neue UltraLight", "Helvetica Neue UltraLight Italic";
 	}
 	.visual-title {
 		font-size: 2.625rem;
@@ -11886,7 +11886,8 @@ a.full-width-icon:hover .social-text {
 	}
 
 	.footer .footer-main h4 {
-		margin-top: 0;
+    margin-top: 0;
+    font-family: Arial, "Arial Black", "Arial Bold", "Arial Bold Italic", "Arial Italic", "Arial Narrow", "Arial Narrow Bold", "Arial Narrow Bold Italic", "Arial Narrow Italic", "Arial Rounded MT Bold", "Arial Unicode MS";
 	}
 
 	.footer .footer-logo {
@@ -12349,7 +12350,8 @@ a.full-width-icon:hover .social-text {
 	}
 
 	.visual-title {
-		font-size: 3.75rem;
+    font-size: 3.75rem;
+    font-family: inherit;
 	}
 
 	.visual-subtitle {
